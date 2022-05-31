@@ -1,0 +1,49 @@
+/* ------------Etiquetas---------- */
+
+
+/* ------------class------------ */
+.fondo{
+    display: flex;
+    padding:21px 21px 21px 21px;
+    background-color: rgba(77, 79, 91, 0.88);
+    border: 0;
+    border-radius: 50px;
+    min-width: em;
+    max-width: 60em;
+    height: em;
+    margin-top: 250px;
+}
+.registro{
+    flex-direction: row;
+    padding: 1em 4em 2em 4em;
+    position: relative;
+    border: 0;
+    border-radius: 20px;
+    background-color: rgba(139, 156, 198, 0.71);
+    width: 400px;
+    height: em;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+.formRegistro{
+    width: 200px;
+    height: 22px;
+    position: relative;
+    background-color: rgba(170,190,202,0.8);
+    border-radius: 10px;
+    border: 0;
+}
+ .imagenP6{
+    background-image: url("../../../statics/media/img/fondoP6.png");
+    background-size: cover;
+    position:relative;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-flow: row;
+    justify-content: center;
+}  
+/* ---------ID----------- */
+#centradoTexto{
+    text-align: center;
+}
