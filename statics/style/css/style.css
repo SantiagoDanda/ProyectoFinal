@@ -1,33 +1,68 @@
-/* ------------Etiquetas---------- */
-
-
-/* ------------class------------ */
+/* //////////////////Etiquetas////////////////// */
+/* background-image: url("../../../statics/media/img/fondoP6.png");
+    /* background-size: auto; */
+    /* background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover; */
+    /* position:relative; */
+    /* width: 100wh;
+    height: 100vh;
+    display:flex; */
+    /* flex-flow: row; */
+    /* justify-content: center; */ 
+body{
+    background-color: rgb(6, 22, 62);
+}
+/* ///////////////////CLASS///////////////// */
+/* ------------index.html--------------- */
+.contenedorFinal{
+    display: flex;
+    justify-content: center;
+}
 .fondo{
     display: flex;
     padding:21px 21px 21px 21px;
     background-color: rgba(77, 79, 91, 0.88);
     border: 0;
     border-radius: 50px;
-    min-width: em;
-    max-width: 60em;
-    height: em;
-    margin-top: 250px;
+    max-width: 100em;
+    min-width: 20em;
+    max-height: 45em;
+    min-height: 20em;
+    margin-top: 50px;
 }
-.registro{
+.sesion{
+    min-height: 10em;
+    max-height: 40em;
+    min-width: 1em;
+    max-width: 50em;
     flex-direction: row;
     padding: 1em 4em 2em 4em;
     position: relative;
     border: 0;
     border-radius: 20px;
     background-color: rgba(139, 156, 198, 0.71);
-    width: 400px;
-    height: em;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+.registro{
+    min-height: 10em;
+    max-height: 40em;
+    min-width: 1em;
+    max-width: 50em;
+    flex-direction: row;
+    padding: 1em 4em 2em 4em;
+    position: relative;
+    border: 0;
+    border-radius: 20px;
+    background-color: rgba(139, 156, 198, 0.71);
     border-left: 3px solid black;
     border-right: 3px solid black;
 }
 .formRegistro{
-    width: 200px;
-    height: 22px;
+    width: 100%;
+    height: 10%;
     position: relative;
     background-color: rgba(170,190,202,0.8);
     border-radius: 10px;
@@ -35,15 +70,28 @@
 }
  .imagenP6{
     background-image: url("../../../statics/media/img/fondoP6.png");
-    background-size: cover;
+    /* background-size: auto; */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
     position:relative;
-    width: 100%;
+    background-attachment: fixed;
+    width: 100vw;
     height: 100%;
     display:flex;
-    flex-flow: row;
+     /* flex-flow: row; */
     justify-content: center;
 }  
-/* ---------ID----------- */
+
+/* -------------alumnoPrincipal.html y profesorPrincipal.html-------------*/
+
+.botonPrinicpal{
+    background-color: silver;
+}
+
+
+/* ///////////////////ID////////////////// */
+/* -----------index.html------------ */
 #centradoTexto{
     text-align: center;
 }
