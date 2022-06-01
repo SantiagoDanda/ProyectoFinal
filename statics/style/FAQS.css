@@ -1,0 +1,33 @@
+/*---------------------------------------------------------------Css luca faq--------------------------------------------*/
+/* Centrado y responsividad de la pagina*/
+body{
+    font-size: 16px;
+    margin: 3rem 6rem;
+    padding: 2rem;
+    background-color: rgb(21, 37, 100);
+}
+header {
+	padding: 1rem;
+}
+/* deseño del faq*/
+.faq {
+	padding: .2rem 2rem;
+	border-radius: 5px;
+	border-bottom: 1px solid #fff;
+	cursor: pointer;
+}
+/* cuado mueves el cursor hacia un faq cambia de color*/
+.faq:hover {
+	background-color: #bbb;
+}
+/* el texto que responde el faq no se muestra*/
+.faq p {
+	display: none;
+}
+/* cuando el faq le des click cambia de color y aparece el texto*/
+.faq.active {
+	background-color: #fff;
+}
+.faq.active p {
+	display: block;
+}
