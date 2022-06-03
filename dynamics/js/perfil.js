@@ -15,7 +15,7 @@ var cursos = ["mate", "Cantantes", "RomperCamas"];
 var longitudCursos = 3;
 //redirecciona a la imagen y luego pega la imagen que es
 var archivoImg = "../../statics/media/img/"+ "Faraon.jpeg";
-var maestro = true;
+var maestro = false;
 
 // toma la primer letra del nombre
 inicial = nombre.charAt(0);
@@ -63,7 +63,7 @@ if(maestro == true){
     if(archivoImg != ''){
         fotoPerfilF.innerHTML = "<img id='perfil' alt='Foto perfil' src='"+archivoImg+"'>";
     }else{
-        fotoPerfilF.innerHTML ="<h1 id= 'perfil'>"+inicial+"</h1>";
+        fotoPerfilF.innerHTML ="<div id= 'perfilSinFoto' class='tamano'><strong>"+inicial+"</strong></div>";
     } 
     perfil.innerHTML += "<u>"+nombre+"</u>";
     perfil.innerHTML += "<br/><br/><br/><strong>Gruepo: </strong>"+ grupo;
