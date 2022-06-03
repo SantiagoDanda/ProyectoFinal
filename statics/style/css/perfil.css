@@ -1,0 +1,17 @@
+
+/* ///////////ETIQUETAS/////////// */
+body{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* /////////////CLASS///////////// */
+#fotoPerfil{
+    width: 5em;
+    height: 5em;
+    border: 3px black solid;
+    border-radius: 50%;
+}
