@@ -17,10 +17,10 @@
                     <form>
                         <label for="usuario">Usuario</label><br/>
                         <input required type="text" class="formRegistro" name="usuario" placeholder="  Ingresa texto"><br/><br/>
-                        <label for="usuario">Dontraseña</label><br/>
-                        <input required type="password" pattern=".{,6}" class="formRegistro" name="contraseña" placeholder="  ********"><br/><br/>
+                        <label for="contrasena">Contraseña</label><br/>
+                        <input id="contrasena-ini" required type="password" minlength="6" maxlength="20" class="formRegistro" name="contrasena" placeholder="  ********"><br/><br/>
                         <input type="checkbox" class="cBox" name="cBox">
-                        <label for="cBox">Recordar</label><br/><br/>
+                        <label for="cBox">Mostrar contraseña</label><br/><br/>
                         <button class="boton">Botón BV</button>  
                     </form>
                 </div><br/>
@@ -32,16 +32,16 @@
                         <label for="correoReg">Correo electrónico</label><br/>
                         <input required type="email" class="formRegistro" name="correoReg" placeholder="  Ingresa texto" maxlength="30"><br/><br/>
                         <label for="contraseñaReg">Contraseña</label><br/>
-                        <input required type="password" class="formRegistro" name="contraseñaReg" pattern=".{,6}"  placeholder="  ********"><br/><br/>
+                        <input minlength="6" maxlength="20" required type="password" class="formRegistro" name="contraseñaReg" placeholder="  ********"><br/><br/>
                         <label for="confirmContra">Confirmar contraseña</label><br/>
-                        <input required type="password" class="formRegistro" name="confirmContra" pattern=".{,6}"  placeholder="  ********"><br/><br/>
+                        <input minlength="6" maxlength="20" required type="password" class="formRegistro" name="confirmContra" placeholder="  ********"><br/><br/>
                         <label for="nombreCom">Nombre completo</label><br/>
                         <input required type="text" class="formRegistro" name="nombreCom" placeholder="  Ingresa texto" maxlength="60"><br/><br/>
                         <label for="usuario">Usuario</label><br/>
                         <input required type="text" class="formRegistro" name="usuario" placeholder="  Máximo 12 caracteres" minlength="12" maxlength="12"><br/><br/>
 
                         <input type="checkbox" class="cBox" name="cBox">
-                        <label for="cBox">Recordar</label><br/><br/>
+                        <label for="cBox">Mostrar contraseña</label><br/><br/>
                         <button class="boton">Botón BV</button>  
                     </form>
                 </div>
@@ -51,10 +51,11 @@
     <script>
         // BOTÓN PARA MOSTRAR CONTASEÑA-DANDA
         const fondo = document.getElementsByClassName("fondo");
+        const contrasenaIni = document.getElementById("contrasena-ini");
 
         fondo[0].addEventListener("click", (evento) =>{
             if(evento.target.className == "cBox"){
-                console.log("a");
+                contrasenaIni.setAttribute('type', 'text');
             }
         });
     </script>
