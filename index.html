@@ -38,7 +38,7 @@
                         <label for="nombreCom">Nombre completo</label><br/>
                         <input required type="text" class="formRegistro" name="nombreCom" placeholder="  Ingresa texto" maxlength="60"><br/><br/>
                         <label for="usuario">Usuario</label><br/>
-                        <input required type="text" class="formRegistro" name="usuario" placeholder="  Máximo 12 caracteres" minlength="12" maxlength="12"><br/><br/>
+                        <input required type="text" class="formRegistro" name="usuario" placeholder="  Máximo 12 caracteres" minlength="5" maxlength="12"><br/><br/>
 
                         <input type="checkbox" class="cBox" name="cBox">
                         <label for="cBox">Mostrar contraseña</label><br/><br/>
@@ -53,9 +53,22 @@
         const fondo = document.getElementsByClassName("fondo");
         const contrasenaIni = document.getElementById("contrasena-ini");
 
+        let activadorClick = 0;
+        
         fondo[0].addEventListener("click", (evento) =>{
             if(evento.target.className == "cBox"){
-                contrasenaIni.setAttribute('type', 'text');
+
+                if(activadorClick != 1){ //Lo que hago aquí es darle un estado al botón
+                    activadorClick = 1;
+                }else{
+                    activadorClick = 0;
+                }
+
+                if(activadorClick == 1){
+                    contrasenaIni.setAttribute('type', 'text');
+                }else{
+                    contrasenaIni.setAttribute('type', 'password');
+                }
             }
         });
     </script>
