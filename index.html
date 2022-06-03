@@ -34,9 +34,9 @@
                         <label for="correoReg">Correo electrónico</label><br/>
                         <input required type="email" class="formRegistro" name="correoReg" placeholder="  Ingresa texto" maxlength="30"><br/><br/>
                         <label for="contraseñaReg">Contraseña</label><br/>
-                        <input minlength="6" maxlength="20" required type="password" class="formRegistro" name="contraseñaReg" placeholder="  ********"><br/><br/>
+                        <input minlength="6" maxlength="20" required type="password" name="contraseñaReg" placeholder="  ********" class="contrareg"><br/><br/>
                         <label for="confirmContra">Confirmar contraseña</label><br/>
-                        <input minlength="6" maxlength="20" required type="password" class="formRegistro" name="confirmContra" placeholder="  ********"><br/><br/>
+                        <input minlength="6" maxlength="20" required type="password" name="confirmContra" placeholder="  ********" class="contrareg"><br/><br/>
                         <label for="nombreCom">Nombre completo</label><br/>
                         <input required type="text" class="formRegistro" name="nombreCom" placeholder="  Ingresa texto" maxlength="60"><br/><br/>
                         <label for="usuario">Usuario</label><br/>
@@ -50,10 +50,12 @@
             </div>
         </div>
     </div>
+
     <script>
         // BOTÓN PARA MOSTRAR CONTASEÑA-DANDA
         const fondo = document.getElementsByClassName("fondo");
         const contrasenaIni = document.getElementById("contrasena-ini");
+        const contraseniasReg = document.getElementsByClassName("contrareg");
 
         let activadorClick = 0;
         
@@ -70,6 +72,16 @@
                         contrasenaIni.setAttribute('type', 'text');
                     }else{
                         contrasenaIni.setAttribute('type', 'password');
+                    }
+                }
+
+                else{
+                    if(activadorClick == 1){
+                        contraseniasReg[0].setAttribute('type', 'text');
+                        contraseniasReg[1].setAttribute('type', 'text');
+                    }else{
+                        contraseniasReg[0].setAttribute('type', 'password');
+                        contraseniasReg[1].setAttribute('type', 'password');
                     }
                 }
             }

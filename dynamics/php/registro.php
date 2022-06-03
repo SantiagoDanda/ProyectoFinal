@@ -23,7 +23,34 @@
         die();
     }
 
-    //FALTA CONSULTA PARA COMPROBAR QUE SI UN USUARIO EXISTA NO TE PERMITA REGISTRARTE ASÍ
+    /////////////////COMPROBAR SI USUARIO O NÚMERO DE CUENTA YA ES UTILIZADO//////////////////////
+    $consultaCompruebaNum = "SELECT numcuenta FROM usuarios WHERE numcuenta = $numcuenta";
+    $consulta = mysqli_query($conexion, $consultaCompruebaNum);
+    $consulta = mysqli_fetch_array($consulta);
+
+    if($consulta != NULL){ //Aquí le estoy diciendo: Si el número que metí en el formulario ya existe
+                           //en la BD, entonces no dejes que se registre y regresa al index
+        echo'
+        <script type="text/javascript">
+            alert("Ya hay un usuario con este número de cuenta.");
+            window.location.href="./../..";
+        </script>';
+        die();
+    }
+
+    $consultaCompruebaUsuario = "SELECT usuario FROM usuarios WHERE usuario = '$usuario'";
+    $consulta = mysqli_query($conexion, $consultaCompruebaUsuario);
+    $consulta = mysqli_fetch_array($consulta);
+
+    if($consulta != NULL){ //Exactamente lo mismo que con el if de arriba, pero con el usuario.
+        echo'
+        <script type="text/javascript">
+            alert("Ya existe este usuario.");
+            window.location.href="./../..";
+        </script>';
+        die();
+    }
+    /////////////////////////////////////////////////////////////////////////////////////
 
     //FALTA CONSULTA PARA SABER EL TIPO DE USUARIO SEGÚN EL NÚMERO DE CUENTA
     

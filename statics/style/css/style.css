@@ -69,7 +69,7 @@ button{
     border-left: 3px solid black;
     border-right: 3px solid black;
 }
-.formRegistro{
+.formRegistro, .contrareg{
     width: 90%;
     height: 10%;
     position: relative;
