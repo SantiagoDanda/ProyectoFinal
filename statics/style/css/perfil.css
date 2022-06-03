@@ -10,8 +10,35 @@ body{
 
 /* /////////////CLASS///////////// */
 #fotoPerfil{
+    max-width: 6em;
+    min-width: 3em;
+    max-height: 6em;
+    min-height: 3em;
     width: 5em;
     height: 5em;
-    border: 3px black solid;
+}
+#perfil{
+    border: 3px rgb(0, 0, 0) solid;
+    max-width: 6em;
+    min-width: 3em;
+    max-height: 6em;
+    min-height: 3em;
+    width: 5em;
+    height: 5em;
     border-radius: 50%;
+}
+#perfilSinFoto{
+
+
+    background-color: rgb(5, 99, 32);
+    border: 3px rgb(0, 0, 0) solid;
+    max-width: 6em;
+    min-width: 3em;
+    max-height: 6em;
+    min-height: 3em;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    font-size: 100%;
+    color:rgb(255, 255, 255);
 }
