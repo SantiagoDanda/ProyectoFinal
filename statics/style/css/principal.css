@@ -1,0 +1,48 @@
+/* //////////ETIQUETAS/////////// */
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ////////////CLASS////////////// */
+.fondo{
+    display:flex;
+    /* display: block; */
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center ;  */
+    justify-content: space-between ;
+    background-color: rgb(125, 186, 248);
+    min-width: 10em;
+    max-width: 40em;
+    width: 30em;
+    height:33em;
+    min-height: 30em;
+    max-height: 37em;
+
+}
+.botonPrin{
+    font-size: 20px;
+    background-color: rgba(217, 217, 217, 1);
+    width: 10em;
+    min-width: 2em;
+    max-width: 10em;
+    height: 3em;
+    border: 0;
+    border-radius: 19px;
+}
+.perfil{
+    position: relative;
+    top: 140px;
+    left: -160px;
+    width: 5em;
+    height: 5em;
+    min-width: 2em;
+    max-width: 7em;
+    font-size: 20px;
+    background-color: rgba(217, 217, 217, 1);
+    border: 0;
+    border-radius: 5px;
+}
+/* ////////////ID///////////////// */
