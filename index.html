@@ -12,6 +12,7 @@
     <div class="contenedorFinal">
         <div class="imagenP6">
             <div class="fondo">
+                <!-- INICIAR SESION-YISUS -->
                 <div class="sesion">
                     <h1 style="color:#FFFFFF" id="centradoTexto">Iniciar sesión</h1>
                     <form>
@@ -19,11 +20,12 @@
                         <input required type="text" class="formRegistro" name="usuario" placeholder="  Ingresa texto"><br/><br/>
                         <label for="contrasena">Contraseña</label><br/>
                         <input id="contrasena-ini" required type="password" minlength="6" maxlength="20" class="formRegistro" name="contrasena" placeholder="  ********"><br/><br/>
-                        <input type="checkbox" class="cBox" name="cBox">
+                        <input type="checkbox" class="cBox" name="cBox" id="contrasena-ini-btn">
                         <label for="cBox">Mostrar contraseña</label><br/><br/>
                         <button class="boton">Botón BV</button>  
                     </form>
                 </div><br/>
+                <!-- REGISTRO-YISUS -->
                 <div class="registro">
                     <h1 style="color:#FFFFFF" id="centradoTexto">Registrarse</h1>
                     <form action="./dynamics/php/registro.php" method="post">
@@ -64,10 +66,12 @@
                     activadorClick = 0;
                 }
 
-                if(activadorClick == 1){
-                    contrasenaIni.setAttribute('type', 'text');
-                }else{
-                    contrasenaIni.setAttribute('type', 'password');
+                if(evento.target.id == "contrasena-ini-btn"){
+                    if(activadorClick == 1){
+                        contrasenaIni.setAttribute('type', 'text');
+                    }else{
+                        contrasenaIni.setAttribute('type', 'password');
+                    }
                 }
             }
         });
