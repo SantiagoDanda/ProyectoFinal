@@ -1,3 +1,5 @@
+<!-- te registra -->
+
 <?php
     //Esto incluye la conexión a la BD
     include("./conexion.php");

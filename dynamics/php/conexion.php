@@ -1,3 +1,4 @@
+<!-- conecta a la base de datos -->
 <?php
     define("DBHOST", "localhost");
     define("DBUSER", "root");

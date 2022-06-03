@@ -15,9 +15,9 @@
                 <!-- INICIAR SESION-YISUS -->
                 <div class="sesion">
                     <h1 style="color:#FFFFFF" id="centradoTexto">Iniciar sesión</h1>
-                    <form>
+                    <form  action="./dynamics/php/sesion.php" method="post">
                         <label for="usuario">Usuario</label><br/>
-                        <input required type="text" class="formRegistro" name="usuario" placeholder="  Ingresa texto"><br/><br/>
+                        <input required type="text" class="formRegistro" name="usuarioSes" placeholder="  Ingresa texto"><br/><br/>
                         <label for="contrasena">Contraseña</label><br/>
                         <input id="contrasena-ini" required type="password" minlength="6" maxlength="20" class="formRegistro" name="contrasena" placeholder="  ********"><br/><br/>
                         <input type="checkbox" class="cBox" name="cBox" id="contrasena-ini-btn">
@@ -64,8 +64,7 @@
                     activadorClick = 1;
                 }else{
                     activadorClick = 0;
-                }
-
+                }       
                 if(evento.target.id == "contrasena-ini-btn"){
                     if(activadorClick == 1){
                         contrasenaIni.setAttribute('type', 'text');
