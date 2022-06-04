@@ -14,9 +14,9 @@
     $comentario = (isset ($_POST["comentario"]) && $_POST["comentario"] != "") ? $_POST["comentario"]: false;
     $archivo = (isset ($_POST["archivo"]) && $_POST["archivo"] != "")? $_POST["archivo"]: false;
     
-    $peticionMensaje = "INSERT INTO mensajes VALUES (NULL, '$_SESSION[numcuenta]', 321146650, '$mensaje', '$asunto', 'dudas')";
+    $peticionMensaje = "INSERT INTO mensajes VALUES (NULL, '$_SESSION[numcuenta]', NULL, '$mensaje', '$asunto', 'dudas')";
     $consulta = mysqli_query($conexion, $peticionMensaje);
-    $consulta = mysqli_fetch_array($consulta);
 
-    header("Location: ../templates/inicio.html");
+    echo 'a';
+    header('Location: ./dudasPag.php');
 ?>

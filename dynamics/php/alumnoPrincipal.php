@@ -10,14 +10,14 @@
 <body>
     <div class="fondo">
         <h1>Página principal</h1>
-        <form action="../../statics/templates/Perfil.html">
+        <form action="./Perfil.php">
             <button class="perfil">Perfil</button>
         </form>
-        <button class="botonPrin">Calendario</button>
-        <button class="botonPrin">Clases</button>
+        <button class="botonPrin" id="btn-calendario">Calendario</button>
+        <button class="botonPrin" id="btn-clases">Clases</button>
         <button class="botonPrin" id="btn-preguntas">Preguntas</button>
-        <button class="botonPrin">Juegos</button>
-        <button class="botonPrin">Calificaciones</button>
+        <button class="botonPrin" id="btn-juegos">Juegos</button>
+        <button class="botonPrin" id="btn-calificaciones">Calificaciones</button>
     </div>
     <script src="../js/perfil.js"></script>
     <script src="../js/botonesInicio.js"></script>
@@ -27,5 +27,5 @@
     session_start();
     echo $_SESSION["usuario"];
     echo $_SESSION["numcuenta"];
-
+    echo $_SESSION["tipo"];
 ?>

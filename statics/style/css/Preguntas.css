@@ -1,7 +1,13 @@
 body{
     background-color: rgb(31, 94, 165);
 }
+#botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 button{
+    display: block;
     background-color: #601cd5;
     border: none;
     color: white;
