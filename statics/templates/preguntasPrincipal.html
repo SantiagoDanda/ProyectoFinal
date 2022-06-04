@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Principal</title>
+</head>
+<body>
+    <button id="dudas">Déjanos tus dudas</button>
+    <button id="faqs">Preguntas Frecuentes</button>
+    <button id="foro">Ve al foro</button>
+
+    <script>
+        /////// BOTONES-DANDA //////////777
+        const faqs = document.getElementById("faqs");
+        const dudas = document.getElementById("dudas");
+
+        faqs.addEventListener("click", () =>{
+            window.location.href = "./FaQ.html";
+        });
+
+        dudas.addEventListener("click", () =>{
+            window.location.href = "../../dynamics/php/dudasPag.php";
+        });
+    </script>
+</body>
+</html>

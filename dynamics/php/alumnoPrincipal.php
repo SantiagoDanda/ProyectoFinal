@@ -10,19 +10,22 @@
 <body>
     <div class="fondo">
         <h1>Página principal</h1>
-        <form action="./Perfil.html">
+        <form action="../../statics/templates/Perfil.html">
             <button class="perfil">Perfil</button>
         </form>
         <button class="botonPrin">Calendario</button>
         <button class="botonPrin">Clases</button>
-        <button class="botonPrin">Preguntas</button>
+        <button class="botonPrin" id="btn-preguntas">Preguntas</button>
         <button class="botonPrin">Juegos</button>
         <button class="botonPrin">Calificaciones</button>
     </div>
-    <script src="../../dynamics/js/perfil.js"></script>
+    <script src="../js/perfil.js"></script>
+    <script src="../js/botonesInicio.js"></script>
 </body>
 </html>
 <?php
     session_start();
     echo $_SESSION["usuario"];
+    echo $_SESSION["numcuenta"];
+
 ?>
