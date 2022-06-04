@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página principal alumno</title>
-    <link rel="stylesheet" href="../style/css/principal.css">
+    <link rel="stylesheet" href="./../../statics/style/css/principal.css">
 </head>
 <body>
     <div class="fondo">
@@ -22,3 +22,7 @@
     <script src="../../dynamics/js/perfil.js"></script>
 </body>
 </html>
+<?php
+    session_start();
+    echo $_SESSION["usuario"];
+?>

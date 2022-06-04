@@ -53,10 +53,18 @@
     /////////////////////////////////////////////////////////////////////////////////////
 
     //FALTA CONSULTA PARA SABER EL TIPO DE USUARIO SEGÚN EL NÚMERO DE CUENTA
+    $arregloNumCuenta = array_map('intval', str_split($numcuenta));
+
+    if($arregloNumCuenta[0] == 4 && $arregloNumCuenta[1] == 0){
+        $tipoDeUsuario = 'profe';
+    }
+    else{
+        $tipoDeUsuario = 'alumno';
+    }
     
-    //Consulta
+    //////////////PETICIÓN PARA REGISTRAR////////////////////////
     $peticionRegistro = "INSERT INTO usuarios VALUES ($numcuenta, '$usuario', '$correo', '$contrasena',
-    NULL, NULL, NULL, NULL, 'alumno', '$nombre')";
+    NULL, NULL, NULL, NULL, '$tipoDeUsuario', '$nombre')";
     $consulta = mysqli_query($conexion, $peticionRegistro);
     
     if($consulta == true){

@@ -14,7 +14,7 @@ var comentarioExtra = "Duro dos horas";
 var cursos = ["mate", "Cantantes", "RomperCamas"];
 var longitudCursos = 3;
 //redirecciona a la imagen y luego pega la imagen que es
-var archivoImg = "../../statics/media/img/"+ "Faraon.jpeg";
+var archivoImg = "../statics/media/img/"+ "Faraon.jpeg";
 var maestro = false;
 
 // toma la primer letra del nombre
@@ -23,7 +23,7 @@ inicial = inicial.toUpperCase();
 
 // comentar estas lineas cuando se agregue base de datos
 console.log(inicial);
-archivoImg = "";
+// archivoImg = "";
 
 // variables que si son variables
 var i=0;
