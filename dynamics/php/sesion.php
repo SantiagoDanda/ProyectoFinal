@@ -1,5 +1,5 @@
 <?php
-    /////////////////INICIOSESION-PAPUYISUS////////////////////
+    /////////////////INICIOSESION-YISUS////////////////////
 
     session_start();
 
@@ -46,7 +46,17 @@
             $consulta = mysqli_fetch_array($consulta);
             
             $_SESSION["numcuenta"] = $consulta[0];
+<<<<<<< HEAD
 
+=======
+            
+            //PARA TIPO DE USUARIO//
+            $consultaTipo = "SELECT tipo FROM usuarios where usuario = '$nombre'";
+            $consulta = mysqli_query($conexion, $consultaTipo);
+            $consulta = mysqli_fetch_array($consulta);
+            
+            $_SESSION["tipo"] = $consulta[0];
+>>>>>>> f3a58415aca3254f756f73bcff94874c31a5e5de
         }
     }else if($consulta == NULL){
         echo'
