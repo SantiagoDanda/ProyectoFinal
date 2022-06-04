@@ -79,4 +79,5 @@ if(maestro == true){
         perfil.innerHTML += "<br/><br/>"+email;
         perfil.innerHTML += "<br/>"+ idExterno;
     }
+    perfil.innerHTML += "<form action='./alumnoPrincipal.html'> <button>Regresar</button></form>";
 }
