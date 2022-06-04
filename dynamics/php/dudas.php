@@ -1,13 +1,22 @@
 <!-- Manda las dudas al sistema-->
 <?php 
-    // conexion a la bd
-    //include("./conexion.php");
-    //$conexion= connect();
+    ///////////// MANDAR DUDAS - DANDA Y LUCA :V//////////////
+    /*
+    Aquí lo que estamos haciendo es mandar el mensaje desde la página de dudas hacia el admin
+    */
+    session_start();
 
-    $nCuenta = (isset($_POST["nCuenta"]) && $_POST["nCuenta"] != "") ? $_POST["nCuenta"]: false;
+    include("./conexion.php");
+    $conexion= connect();
+
+    $mensaje = (isset($_POST["comentario"]) && $_POST["comentario"] != "") ? $_POST["comentario"]: false;
     $asunto = (isset($_POST["asunto"]) && $_POST["asunto"] != "") ? $_POST["asunto"]: false;
     $comentario = (isset ($_POST["comentario"]) && $_POST["comentario"] != "") ? $_POST["comentario"]: false;
     $archivo = (isset ($_POST["archivo"]) && $_POST["archivo"] != "")? $_POST["archivo"]: false;
-    var_dump($nCuenta, $asunto);
-    echo "a";
+    
+    $peticionMensaje = "INSERT INTO mensajes VALUES (NULL, '$_SESSION[numcuenta]', 321146650, '$mensaje', '$asunto', 'dudas')";
+    $consulta = mysqli_query($conexion, $peticionMensaje);
+    $consulta = mysqli_fetch_array($consulta);
+
+    header("Location: ../templates/inicio.html");
 ?>

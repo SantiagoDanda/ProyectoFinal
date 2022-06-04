@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+<!-- PÁGINAS DE DUDAS-LUCA -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dudas</title>
-    <link rel="stylesheet" href="../style/css/dudas.css">
+    <link rel="stylesheet" href="../../statics/style/css/dudas.css">
 </head>
 <body>
     <h1>¡Déjanos tus dudas!</h1>
-    <form action="../../dynamics/php/dudas.php" method="post">
-        <label for="nCuenta">Número de Cuenta: </label><br>
-        <input required type="number" id="nCuenta" name="nCuenta" placeholder="Número de Cuenta"><br><br>
+    <form action="./dudas.php" method="post">
         <label for="asunto">Asunto: </label><br>
         <input required type="text" id="asunto" name="asunto" placeholder="¿Cuál es tu asunto?"><br><br>
         <label for="comentario">Comentario: </label><br>

@@ -38,6 +38,13 @@
                     window.location.href="./alumnoPrincipal.php";
                 </script>
             ';
+
+            ///PETICIÓN PARA OBTENER NUMERO DE CUENTA-DANDA///
+            $consultaNumero = "SELECT numcuenta FROM usuarios where usuario = '$nombre'";
+            $consulta = mysqli_query($conexion, $consultaNumero);
+            $consulta = mysqli_fetch_array($consulta);
+            
+            $_SESSION["numcuenta"] = $consulta[0];
         }
     }else if($consulta == NULL){
         echo'
