@@ -46,9 +46,6 @@
             $consulta = mysqli_fetch_array($consulta);
             
             $_SESSION["numcuenta"] = $consulta[0];
-<<<<<<< HEAD
-
-=======
             
             //PARA TIPO DE USUARIO//
             $consultaTipo = "SELECT tipo FROM usuarios where usuario = '$nombre'";
@@ -56,7 +53,13 @@
             $consulta = mysqli_fetch_array($consulta);
             
             $_SESSION["tipo"] = $consulta[0];
->>>>>>> f3a58415aca3254f756f73bcff94874c31a5e5de
+
+            //PARA EL PERFIL
+            $consultaUrl = "SELECT url FROM usuarios where usuario = '$nombre'";
+            $consulta = mysqli_query($conexion, $consultaUrl);
+            $consulta = mysqli_fetch_array($consulta);
+            
+            $_SESSION["url"] = $consulta[0];
         }
     }else if($consulta == NULL){
         echo'
