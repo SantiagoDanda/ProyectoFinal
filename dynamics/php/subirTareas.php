@@ -9,20 +9,32 @@
 <body>
     <?php
         echo'
-        <h1>Subir archivo</h1>
-        <form action="./archivo/archivo.php" method="POST" enctype="multipart/form-data">
-            <fieldset><br/>
-                <legend>Subir imágenes</legend>
-                <label for="namei">Nombre de la imagen</label>
-                <input required type="texto" name="namei" id="namei">
-                <br/><br/>
-                <label for="archivo">Archivo: </label>
-                <input type="file" name="archivo" id="archivo">
-                <br/><br/>
-                <input type="submit" value="enviar"><br/><br/>
-                <input type="reset" value="borrar">
-            </fieldset>
-        </form>
+            <div>
+                <form action="./archivo/archivoTarea.php" method="POST" enctype="multipart/form-data">
+                    <fieldset><br/>
+                        <legend>Subir Tareas</legend>
+                        <h1>Subir Comentario</h1>
+                        <label for="comentario">Comentario: </label>
+                        <input type="text" name="comentario" id="comentario"> (opcional)<br/><br/>
+                        <label for="fechaEntrega">Fecha de entrega: </label>
+                        <input type= "date" name="fechaEntrega"> (opcional)<br/><br/>
+                        <label for="puntos">Puntos: </label>
+                        <input required type= "number" name="puntos" min="0" max="100"> x de 100 pts <br/><br/>
+                        
+                        <label for="nombreAct">Nombre de la actividad: </label> 
+                        <input  required type="text" name="nombreAct"> (requerido)
+                        <h1>Subir archivo</h1>
+                        <label for="namei">Nombre del archivo</label>
+                        <input required type="texto" name="namei" id="namei">
+                        <br/><br/>
+                        <label for="archivo">Archivo: </label>
+                        <input type="file" name="archivo" id="archivo">
+                        <br/><br/>
+                        <input type="submit" value="enviar"><br/><br/>
+                        <input type="reset" value="borrar">
+                    </fieldset>
+                </form>
+            </div>
         ';
     ?>
 </body>

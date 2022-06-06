@@ -13,8 +13,13 @@
         echo $_SESSION["usuario"];
         echo $_SESSION["numcuenta"];
         echo $_SESSION["tipo"];
+        $tipo = $_SESSION["tipo"];
+    
+
     ?>
-    <div class="fondo">
+    <?php
+    echo 'estoy en alumno';
+    echo '<div class="fondo">
         <h1>Página principal</h1>
         <form action="./Perfil.php">
             <button class="perfil">Perfil</button>
@@ -22,12 +27,16 @@
         <button class="botonPrin" id="btn-calendario">Calendario</button>
         <button class="botonPrin" id="btn-clases">Clases</button>
         <button class="botonPrin" id="btn-preguntas">Preguntas</button>
-        <button class="botonPrin" id="btn-juegos">Juegos</button>
-        <form action="./calificaciones.php">
-            <button class="botonPrin" id="btn-calificaciones">Calificaciones</button>
-        </form>
-    </div>
-    <script src="../js/perfil.js"></script>
-    <script src="../js/botonesInicio.js"></script>
+        <button class="botonPrin" id="btn-juegos">Juegos</button>';
+        if($tipo != "profe"){
+            echo '<form action="./calificaciones.php">
+                <button class="botonPrin" id="btn-calificaciones">Calificaciones</button>
+            </form>';
+        }
+        echo '</div>
+        <script src="../js/perfil.js"></script>
+        <script src="../js/botonesInicio.js"></script>
+    ';
+    ?>
 </body>
 </html>

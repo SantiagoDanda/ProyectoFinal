@@ -13,9 +13,8 @@
         $arch= $_FILES['archivo']['tmp_name'];
 
         if($ext == 'png' || $ext == 'jpg' || $ext == 'jpeg'){
-            rename($arch, '../../../statics/media/'.$nombre.'.'.$ext);
+            rename($arch, '../../../statics/media/img/'.$nombre.'.'.$ext);
             $nombreC = $nombre.'.'.$ext;
-            echo"$nombreC";
             $peticionInfo = "UPDATE usuarios SET url='$nombreC' WHERE numcuenta=$numcuenta";
         }else{
             echo"Solo aceptamos imagenes con extención .jpg, .jpeg o png ";

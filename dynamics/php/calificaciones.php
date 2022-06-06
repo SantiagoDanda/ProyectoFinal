@@ -53,11 +53,13 @@
             <div id='cuadroClases'>
                 <div id='contenedorClases'>
                     <u>".$materia[$i]."</u><br/>
-                    <div id='porcentajeT'>
-                        <div id='porcentajeC' width=''></div>
-                    </div>
+                    <canvas id='miCanvas' width='700' height='700'>
+                        <p>Estas viendo este mensaje porque canvas no funciona, la estrella no se puede mostrar</p>
+                    </canvas>
                 </div> 
             </div><br/>
+            <script src='../js/calficaciones.js'>
+            </script>
             ";
         }
     ?>
