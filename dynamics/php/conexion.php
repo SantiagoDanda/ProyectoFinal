@@ -1,4 +1,4 @@
-<!-- conecta a la base de datos -->
+
 <?php
     define("DBHOST", "localhost");
     define("DBUSER", "root");
@@ -13,8 +13,4 @@
         }
         return $conexion;
     }
-    connect();
 ?>
-
-<!-- Este archivo sirve para conectarse a la base de datos -->
-<!-- Lo hizo Danda  -->

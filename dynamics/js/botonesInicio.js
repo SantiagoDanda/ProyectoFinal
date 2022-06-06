@@ -11,7 +11,7 @@ botones[0].addEventListener("click", (evento) =>{ //Calendario
     window.location.href = "";
 });
 botones[1].addEventListener("click", (evento) =>{ //Clases
-    window.location.href = "../php/clases.php";
+    window.location.href = "../php/clases/clases.php";
 });
 botones[3].addEventListener("click", (evento) =>{ //Juegos
     window.location.href = "";

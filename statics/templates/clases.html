@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../style/css/clasesAlumnos.css">
 </head>
 <body>
-    <input type="number">
+    <h1>¡Bienvenido a tus clases!</h1>
+    <br><br>
+    
+    <div id="registrarse">
+        <form id="form">
+            <div class="campo">Introduce el código de tu clase: <input type="number" min="0" name="codigo"><label for="codigo"></label></div>
+            <button id="btn-enviar">Enviar</button>
+        </form>
+    </div>
+
+    <div id="clases">
+        
+    </div>
+
+    <script src="./../../dynamics/js/registroClase.js"></script>
 </body>
 </html>
