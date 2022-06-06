@@ -8,25 +8,8 @@
 </head>
 <body>
     <?php
-
-        echo '<h1>Rellena los campos</h1>
-            <form action="./info.php" method="post">
-                <label for="grupo">Grupo</label>
-                <input required type="number" name="grupo"  min="401" max="670"></input><br/>
-                <label for="contacto">Contacto:</label>
-                <input type="url" name="contacto"></input><br/>
-                <label for="info">Información sobre ti: </label>
-                <input type="text" name="info"></input><br/>
-
-                <button>enviar</button>
-            </form>';
         echo'
-            <form action="./Perfil.php">
-                <button>Regresar</button>
-            </form>
-        ';
-        echo'
-        <h1>Subir foto de perfil</h1>
+        <h1>Subir archivo</h1>
         <form action="./archivo/archivo.php" method="POST" enctype="multipart/form-data">
             <fieldset><br/>
                 <legend>Subir imágenes</legend>
