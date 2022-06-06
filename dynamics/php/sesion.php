@@ -21,13 +21,14 @@
     $consultaContra = mysqli_query($conexion, $peticionContrasena);
     $consultaContra = mysqli_fetch_array($consultaContra);
 
+
     // verifica que el usuario exista
     if($consulta != NULL){
         // verifica que la contraseña coincida con la del usuario
         if($contrasena != $consultaContra[0]){
             echo '
                 <script>
-                    alert("El usuario o la contraseña son icorrectos");
+                    alert("El usuario no existe, por favor registrate");
                     window.location.href="./../..";
                 </script>
             ';
@@ -52,6 +53,13 @@
             $consulta = mysqli_fetch_array($consulta);
             
             $_SESSION["tipo"] = $consulta[0];
+
+            //PARA EL PERFIL
+            $consultaUrl = "SELECT url FROM usuarios where usuario = '$nombre'";
+            $consulta = mysqli_query($conexion, $consultaUrl);
+            $consulta = mysqli_fetch_array($consulta);
+            
+            $_SESSION["url"] = $consulta[0];
         }
     }else if($consulta == NULL){
         echo'

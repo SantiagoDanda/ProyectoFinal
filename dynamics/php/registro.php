@@ -14,6 +14,7 @@
     $usuario = (isset($_POST["usuario"]) && $_POST["usuario"] != "") ? $_POST["usuario"]: false;
     //Lo de arriba es pa' que lleguen los datos del form correctamente hasta nosotros.
 
+
     if($confcontrasena != $contrasena){ //Comprueba que las contraseñas sean iguales
         echo'
         <script type="text/javascript">

@@ -29,7 +29,6 @@ body{
 }
 #perfilSinFoto{
 
-
     background-color: rgb(5, 99, 32);
     border: 3px rgb(0, 0, 0) solid;
     max-width: 6em;
@@ -42,3 +41,4 @@ body{
     font-size: 100%;
     color:rgb(255, 255, 255);
 }
+

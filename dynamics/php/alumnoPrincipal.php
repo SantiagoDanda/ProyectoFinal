@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="./../../statics/style/css/principal.css">
 </head>
 <body>
+    <?php
+        session_start();
+        echo $_SESSION["usuario"];
+        echo $_SESSION["numcuenta"];
+        echo $_SESSION["tipo"];
+    ?>
     <div class="fondo">
         <h1>Página principal</h1>
         <form action="./Perfil.php">
@@ -17,15 +23,11 @@
         <button class="botonPrin" id="btn-clases">Clases</button>
         <button class="botonPrin" id="btn-preguntas">Preguntas</button>
         <button class="botonPrin" id="btn-juegos">Juegos</button>
-        <button class="botonPrin" id="btn-calificaciones">Calificaciones</button>
+        <form action="./calificaciones.php">
+            <button class="botonPrin" id="btn-calificaciones">Calificaciones</button>
+        </form>
     </div>
     <script src="../js/perfil.js"></script>
     <script src="../js/botonesInicio.js"></script>
 </body>
 </html>
-<?php
-    session_start();
-    echo $_SESSION["usuario"];
-    echo $_SESSION["numcuenta"];
-    echo $_SESSION["tipo"];
-?>
