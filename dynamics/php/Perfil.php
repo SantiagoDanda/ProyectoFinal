@@ -60,6 +60,7 @@
         //dirección de imagenes de perfil
         // $consultaPerfilU[0] = "Faraon.jpeg";
         // $consultaPerfilU[0] = "";
+        echo $consultaPerfilU[0];
         $direccionImagen = "../../statics/media/img/".$consultaPerfilU[0];
         $inicial = substr($consultaPerfilUs[0], 0,1);
         $inicial = strtoupper($inicial);
