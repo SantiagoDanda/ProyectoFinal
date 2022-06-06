@@ -5,7 +5,7 @@ const clases = document.getElementById("clases");
 enviar.addEventListener("click", (evento) =>{
     evento.preventDefault();
     let datosForm = new FormData(form);
-    fetch("../../dynamics/php/clases/registroClase.php", {
+    fetch("../../dynamics/php/clases/hacerClase.php", {
         method:"POST",
         body: datosForm,
     }).then((response)=>{
@@ -13,7 +13,7 @@ enviar.addEventListener("click", (evento) =>{
         return response.json();
     }).then((datosJSON)=>{
         if(datosJSON.ok == true){
-            alert("Todo bien");
+            alert("Clase creada.");
         }else{
             alert(datosJSON.texto);
         }

@@ -29,7 +29,7 @@ CREATE TABLE `clasehasusuario` (
   PRIMARY KEY (`id_clasehasusuario`),
   KEY `id_clase` (`id_clase`),
   CONSTRAINT `clasehasusuario_ibfk_1` FOREIGN KEY (`id_clase`) REFERENCES `clases` (`id_clase`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `clasehasusuario` (
 
 LOCK TABLES `clasehasusuario` WRITE;
 /*!40000 ALTER TABLE `clasehasusuario` DISABLE KEYS */;
+INSERT INTO `clasehasusuario` VALUES (1,1,321146650),(2,2,321146650),(3,1,321146651),(4,2,321146651),(5,1,345000000),(6,2,345000000),(7,1,311111666),(8,2,311111666),(9,1,999999997),(10,2,999999997),(11,1,222222222),(12,2,222222222);
 /*!40000 ALTER TABLE `clasehasusuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -226,6 +227,10 @@ CREATE TABLE `tareahasusuario` (
   `id_tareahasusuario` int(11) NOT NULL AUTO_INCREMENT,
   `id_tarea` int(11) DEFAULT NULL,
   `numcuenta` int(11) DEFAULT NULL,
+  `calificacion` tinyint(4) DEFAULT NULL,
+  `subido` tinyint(1) DEFAULT NULL,
+  `url` varchar(40) DEFAULT NULL,
+  `fechasubida` datetime DEFAULT NULL,
   PRIMARY KEY (`id_tareahasusuario`),
   KEY `id_tarea` (`id_tarea`),
   KEY `numcuenta` (`numcuenta`),
@@ -256,8 +261,6 @@ CREATE TABLE `tareas` (
   `id_clase` int(11) DEFAULT NULL,
   `fechasubida` datetime DEFAULT NULL,
   `fechaentrega` datetime DEFAULT NULL,
-  `calificacion` tinyint(4) DEFAULT NULL,
-  `subido` tinyint(1) DEFAULT NULL,
   `puntos` tinyint(4) DEFAULT NULL,
   `nombre` char(50) DEFAULT NULL,
   `descripcion` text DEFAULT NULL,
@@ -288,7 +291,7 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
   `numcuenta` int(11) NOT NULL,
-  `usuario` varchar(12) DEFAULT NULL,
+  `usuario` char(12) DEFAULT NULL,
   `correo` varchar(30) DEFAULT NULL,
   `contrasena` varchar(100) DEFAULT NULL,
   `grupo` int(11) DEFAULT NULL,
@@ -319,4 +322,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-01 17:03:04
+-- Dump completed on 2022-06-06 12:32:30
