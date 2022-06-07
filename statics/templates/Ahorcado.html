@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="../style/css/styleAhorcado.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Juego del ahorcado</h1>
+
+    <h3>Palabra a buscar</h3>
+    <div id="letrasBuscar"></div>
+    <div id="resultado"></div>
+
+    <h3>Letras seleccionadas (Pulse una letra)</h3>
+    <div id="letrasBuscadas"></div>
+
+    <img id="imagen">
+
+    <hr>
+    <button id="Regreso">Regresa a la pagina para selecionar Juegos</button>
+</body>
+</html>
+
+<script src="../../dynamics/js/teclado.js"></script>
+<script src="../../dynamics/js/palabras.js"></script>
+<script src="../../dynamics/js/letras.js"></script>
+
+<script>
+const letras=new Letras();
+letras.buscarPalabra(peliculas);
+letras.mostrarPalabraEnWeb(document.getElementById("letrasBuscar"), []);
+</script>
+<script>
+    const Regreso= document.getElementById("Regreso");
+    Regreso.addEventListener("click", () =>{
+        window.location.href ="./juegosPrincipal.html"
+    }) 
+</script>

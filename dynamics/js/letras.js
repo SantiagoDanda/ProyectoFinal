@@ -37,7 +37,7 @@ class Letras extends Palabras {
      * @param {integer} number 
      */
     showImage(number) {
-        document.getElementById("imagen").src="img/"+number+".png";
+        document.getElementById("imagen").src="../media/imgo/"+number+".png";
         if (number==10) {
             eliminarEvento();
             // mostramos el error
