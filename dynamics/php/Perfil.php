@@ -24,7 +24,7 @@
         $nombre = $_SESSION["usuario"];
         $numCuenta = $_SESSION["numcuenta"];
         // si es maestro es igual a profe y si no es igual a alumno
-        // $tipo= $_SESSION["tipo"];
+        $tipo= $_SESSION["tipo"];
         
         //Estas son las peticiones a la base de datos;
         $peticionUsuario = "SELECT usuario from usuarios where usuario = '$nombre'";
@@ -54,13 +54,10 @@
         $peticionInfo = "SELECT info from usuarios where usuario = '$nombre'";
         $consultaPerfilI = mysqli_query($conexion, $peticionInfo);
         $consultaPerfilI = mysqli_fetch_array($consultaPerfilI);
-
-        $consultaPerfilT[0] = "profe";
         
         //dirección de imagenes de perfil
         // $consultaPerfilU[0] = "Faraon.jpeg";
         // $consultaPerfilU[0] = "";
-        echo $consultaPerfilU[0];
         $direccionImagen = "../../statics/media/img/".$consultaPerfilU[0];
         $inicial = substr($consultaPerfilUs[0], 0,1);
         $inicial = strtoupper($inicial);
@@ -78,7 +75,6 @@
         // echo"$inicial";
 
         //Parte lógica para mostrar el perfil
-
         echo "<div id='fotoPerfil'>";
             if($consultaPerfilU[0] != NULL){
                 echo"<img id='perfil' alt='Foto perfil' src=".$direccionImagen.">";
@@ -92,8 +88,8 @@
                 </form>
             <div>";
         
-                if($consultaPerfilT[0] != NULL){
-                    echo "(".$consultaPerfilT[0].")<br/><br/>";
+                if($tipo != NULL){
+                    echo "(".$tipo.")<br/><br/>";
                 }else{
                     echo "<br/><strong>Tipo </strong> No tenemos esta información, añadela <br/>";
                 }
@@ -108,7 +104,8 @@
                 }else{
                     echo "<br/><strong>Contacto: </strong> No tenemos esta información, añadela ";
                 }
-                if($consultaPerfilT[0] != "profe"){
+
+                if($tipo != "profe"){
                      echo "<br/><br/><strong>Cursos en los que participa: </strong><br/>";
                      if($arreglo != Null){
                         for($i = 0; $i < $totalArreglos-1; $i++){

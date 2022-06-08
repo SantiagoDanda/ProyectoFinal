@@ -14,6 +14,19 @@ body{
     height: 4em;
     top: -1em;
 }
+.estiloB{
+    cursor: pointer;
+    background-color: rgb(112, 175, 231);
+    border-radius: 10px;
+    width: 23%;
+    /* min-width: 5em; */
+    height: 30px;
+    /* max-height: 4em; */
+    
+}
+.estiloB:hover{
+    background-color:rgb(177, 215, 247);
+  }
 
 /* id */
 #fotoPerfil{
@@ -35,7 +48,6 @@ body{
     border-radius: 50%;
 }
 #perfilSinFoto{
-
     background-color: rgb(5, 99, 32);
     border: 3px rgb(0, 0, 0) solid;
     max-width: 6em;
@@ -61,6 +73,7 @@ body{
 /* ////////////////PARTE DE LAS CALIFICACIONES///////////////// */
 
 #contenedorClases{
+    padding: 30px;
     display: flex;
     justify-content: left;
     flex-direction: column;
@@ -68,20 +81,24 @@ body{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     width: 90%;
-    height: 5em;
+    height: em;
 }
 #porcentajeT{
-    width: 70%;
-    height: 15px;
+    /* margin-left: 40px;
+    margin-right: 40px; */
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 20px;
     border: 0;
     border-radius: 10px;
     background-color: rgb(109, 109, 255);
 }
-#porcentajeC{
-    width: 70%;
-
-    height: 15px;
-    border: 0;
-    border-radius: 10px;
-    background-color: rgb(34, 34, 255);
+#linea{
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+#bloque{
+    display: inline-block;
 }

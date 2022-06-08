@@ -14,7 +14,7 @@
         echo $_SESSION["numcuenta"];
         echo $_SESSION["tipo"];
         $tipo = $_SESSION["tipo"];
-    
+
 
     ?>
     <?php
@@ -29,7 +29,7 @@
         <button class="botonPrin" id="btn-preguntas">Preguntas</button>
         <button class="botonPrin" id="btn-juegos">Juegos</button>';
         if($tipo != "profe"){
-            echo '<form action="./calificaciones.php">
+            echo '<form action="./calificaciones/calificaciones.php">
                 <button class="botonPrin" id="btn-calificaciones">Calificaciones</button>
             </form>';
         }
