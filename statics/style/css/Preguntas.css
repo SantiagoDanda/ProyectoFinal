@@ -7,6 +7,7 @@ body{
     justify-content: center;
 }
 button{
+    cursor:pointer;
     display: block;
     background-color: #601cd5;
     border: none;
@@ -21,4 +22,10 @@ button{
 button:hover{
     background-color: #0c89ab;
 
+}
+.botonSalir{
+    background-color: rgb(127, 227, 227);
+}
+.botonSalir:hover{
+    background-color: rgb(76, 197, 221);
 }

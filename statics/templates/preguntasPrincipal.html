@@ -18,7 +18,11 @@
         /////// BOTONES-DANDA //////////
         const faqs = document.getElementById("faqs");
         const dudas = document.getElementById("dudas");
+        const foro = document.getElementById("foro");
 
+        foro.addEventListener("click", ()=>{
+            window.location.href = "../../dynamics/php/foro/foroPrincipal.php";
+        })
         faqs.addEventListener("click", () =>{
             window.location.href = "./FaQ.html";
         });

@@ -10,9 +10,10 @@
 <body>
 
     <?php
+        session_start();
         require "../conexion.php";
         $conexion = connect();
-        $usuario= 321432343;
+        $usuario = $_SESSION["numcuenta"];
         //variables
         $arregloName = NULL;
         // peticiones de tarea has usuarios
@@ -43,8 +44,12 @@
         for($i = 0; $i < $totalClases; $i++){
             $promedioo = $arregloCalif[$i]["calificacion"];
             $promedio += $promedioo;
+        };
+        $total = $totalClases;
+        if($total == 0){
+            $total = 1;
         }
-        $promedio = $promedio/$totalClases;
+        $promedio = $promedio/$total;
         echo $promedio;
 
         $peticionFecha = "SELECT fechasubida FROM tareahasusuario where numcuenta = $usuario";
