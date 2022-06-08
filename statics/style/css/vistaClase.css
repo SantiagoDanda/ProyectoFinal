@@ -1,0 +1,41 @@
+body{
+    margin: 0px;
+    background-color: rgb(255, 248, 214);    
+}
+#contenedor-entradas{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(221, 168, 68);
+    padding: 8px;
+}
+.entradas:hover{
+    background-color: rgb(161, 118, 0);
+    padding: 2px;
+    border-radius: 4px;
+}
+#contenedor-clase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nombre-clase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    background-color: rgb(201, 96, 36);
+    width: 21em;
+    margin-top: 3px;
+}
+#hacer-post{
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.personas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7px;
+}

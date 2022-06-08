@@ -4,6 +4,12 @@
     $conexion = connect();
     // sesión numCuenta para   
     $numCuenta = $_SESSION['numcuenta'];
+    $nombreClase = $_GET['nombre'];
+
+    $peticionNombre = "SELECT id_clase from clases where nombre='$nombreClase'";
+    $peticionNombre = mysqli_query($conexion, $peticionNombre);
+    $peticionNombre = mysqli_fetch_array($peticionNombre);
+    // var_dump($peticionNombre);
 
     //fecha subida
     $fechaSubida = date("Y-m-d H:i:s");
@@ -28,8 +34,9 @@
         if($ext == 'png' || $ext == 'jpg' || $ext == 'jpeg' || $ext == 'pdf' || $ext == 'docx'){
             rename($arch, '../../../statics/media/archivosTarea/'.$nombre.'.'.$ext);
             $nombreC = $nombre.'.'.$ext;
-            $peticionRegistro = "INSERT INTO tareas VALUES (NULL, '$numCuenta', NULL, '$fechaSubida',
+            $peticionRegistro = "INSERT INTO tareas VALUES (NULL, '$numCuenta', $peticionNombre[0], '$fechaSubida',
             '$fechaEntrega', '$valorPuntos', '$nombreAct', '$comentario', '$nombre')";
+            // var_dump($peticionRegistro);
             // $peticionInfo = "UPDATE tareas SET material='$nombre' WHERE numcuenta=$numCuentaMaestro";
 
         }else{
@@ -45,12 +52,14 @@
     if($consultaA == true){
         echo'
         <script type="text/javascript">
+            window.location.href = "../clases/vistaClase.php?nombre='.$nombreClase.'";
             alert("El archivo fue subido correctamente");
         </script>';
         die();
     }else{
         echo'
         <script type="text/javascript">
+            window.location.href = "../clases/vistaClase.php?nombre='.$nombreClase.'";
             alert("Algo falló.");
         </script>';
         die();
