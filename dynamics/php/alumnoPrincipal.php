@@ -25,7 +25,7 @@
         <button class="botonPrin" id="btn-preguntas">Preguntas</button>
         ';
         echo '
-        <form action="../../statics/templates/jugosPrincipal.html">
+        <form action="../../statics/templates/juegosPrincipal.html">
             <button class="botonPrin" id="btn-juegos">Juegos</button>
         </form>
         ';
