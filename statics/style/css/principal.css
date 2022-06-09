@@ -22,7 +22,11 @@ body{
     max-height: 37em;
 
 }
+
+
 .botonPrin{
+    cursor:pointer;
+
     font-size: 20px;
     background-color: rgba(217, 217, 217, 1);
     width: 10em;
@@ -32,7 +36,12 @@ body{
     border: 0;
     border-radius: 19px;
 }
+.botonPrin:hover{
+    background-color: rgb(178, 216, 251);
+}
 .perfil{
+    cursor:pointer;
+
     position: relative;
     top: 140px;
     left: -160px;
@@ -44,5 +53,8 @@ body{
     background-color: rgba(217, 217, 217, 1);
     border: 0;
     border-radius: 5px;
+}
+.perfil:hover{
+    background-color: rgb(133, 189, 219);
 }
 /* ////////////ID///////////////// */

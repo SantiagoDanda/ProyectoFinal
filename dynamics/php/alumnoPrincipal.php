@@ -27,14 +27,18 @@
         <button class="botonPrin" id="btn-calendario">Calendario</button>
         <button class="botonPrin" id="btn-clases">Clases</button>
         <button class="botonPrin" id="btn-preguntas">Preguntas</button>
-        <button class="botonPrin" id="btn-juegos">Juegos</button>';
+        ';
+        echo '
+        <form action="../../statics/templates/juegosPrincipal.html">
+            <button class="botonPrin" id="btn-juegos">Juegos</button>
+        </form>
+        ';
         if($tipo != "profe"){
             echo '<form action="./calificaciones/calificaciones.php">
                 <button class="botonPrin" id="btn-calificaciones">Calificaciones</button>
             </form>';
         }
         echo '</div>
-        <script src="../js/perfil.js"></script>
         <script src="../js/botonesInicio.js"></script>
     ';
     ?>

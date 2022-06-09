@@ -1,7 +1,7 @@
 <?php
     session_start();
     if($_SESSION["tipo"] != 'alumno'){
-        header("Location: ../../../statics/templates/clasesprofe.html");
+        header("Location: ../../../statics/templates/clases.html");
         die();
     }
     else{

@@ -8,9 +8,10 @@
 </head>
 <body>
     <?php
+        $nombreClase = $_GET['nombre'];
         echo'
             <div>
-                <form action="./archivo/archivoTarea.php" method="POST" enctype="multipart/form-data">
+                <form action="./archivo/archivoTarea.php?nombre='.$nombreClase.'" method="POST" enctype="multipart/form-data">
                     <fieldset><br/>
                         <legend>Subir Tareas</legend>
                         <h1>Subir Comentario</h1>
