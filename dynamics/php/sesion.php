@@ -17,22 +17,38 @@
     $consulta = mysqli_query($conexion, $peticionUsuario);
     $consulta = mysqli_fetch_array($consulta);
 
-    $peticionContrasena = "SELECT contrasena from usuarios where contrasena = '$contrasena' and usuario = '$nombre'";
+    $peticionContrasena = "SELECT contrasena from usuarios where usuario = '$nombre'";
     $consultaContra = mysqli_query($conexion, $peticionContrasena);
     $consultaContra = mysqli_fetch_array($consultaContra);
 
+    $sal=hash("sha256", $nombre);
+    $posible_pimienta= str_split("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
+    for($i=0; $i< count($posible_pimienta); $i++)
+    {
+        for($a=0; $a< count($posible_pimienta); $a++){
+            $posiblecontrasena=hash("sha256", $contrasena.$posible_pimienta[$i].$posible_pimienta[$a].$sal);
+            if($posiblecontrasena==$consultaContra[0]){
+                $contrasenacorrecta=true;
+                $a=count($posible_pimienta);
+                $i=count($posible_pimienta);
+            }
+            else{
+                // $contrasenacorrecta=false;
+            }
+        }
+    }
 
     // verifica que el usuario exista
     if($consulta != NULL){
         // verifica que la contraseña coincida con la del usuario
-        if($contrasena != $consultaContra[0]){
+        if($contrasenacorrecta==false){
             echo '
                 <script>
-                    alert("El usuario no existe, por favor registrate");
+                    alert("Contraseña incorrecta");
                     window.location.href="./../..";
                 </script>
             ';
-        }else if($contrasena == $consultaContra[0]){
+        }else if($contrasenacorrecta==true){
             $_SESSION["usuario"] = $nombre;
             echo '
                 <script>

@@ -4,7 +4,7 @@
 
 Explicación:
 
-Nuestro proyecto consiste en un aula virtual, en la cual puedes jugar diversos juegos educativos, ver fechas importantes, tener diferentes clases con tareas y anuncios, estas tareas pueden ser calificadas por el maestro. También tiene un foro de preguntas, en el cual los alumnos pueden preguntar y responder entre ellos sobre distintos temas académicos.
+Nuestro proyecto consiste en un aula virtual, en la cual puedes jugar diversos juegos educativos, ver fechas importantes, tener diferentes clases con tareas y anuncios, dichas tareas pueden ser calificadas por el maestro. También tiene un foro de preguntas, en el cual los alumnos pueden preguntar y responder entre ellos sobre distintos temas académicos.
 
 Tecnologías:
 
@@ -40,9 +40,9 @@ SOURCE moodle.sql;
 ## Uso:
 1. Registrate en la pagina
 2. Inicia sesion
-3. En la pagina prinipal puedes acceder a diferentes rubros, un calendario, las clases en las que te inscribas, Preguntas, Juegos, calificaciones y perfil.
-4. El calendario te dara la fecha de los eventos importantes de la ENP 6.
-5. Las clases debes ingresar el id que te de tu profesor, dentro de esta vista puedes entrar a tus clases inscritas y checar anuncios y tareas encargadas por tu maestro.
+3. En la pagina principal puedes acceder a diferentes rubros, un calendario, las clases en las que te inscribas, preguntas, juegos, calificaciones y observar tu perfil.
+4. El calendario te dará la fecha de los eventos importantes de la ENP 6.
+5. Las clases debes ingresar el id que te proporcione tu profesor, dentro de la vista puedes entrar a tus clases inscritas y checar anuncios y tareas encargadas por tu maestro.
 6. En la seccion de preguntas hay 3 botones, el primero es un pequeño formulario en el que nos puede mandar dudas el estudiantado. El segundo boton, son las preguntas frecuentes de la pagina en la que puedes encontar informacion relevante. El tercer boton te manda al foro de preguntas, es una pequeña red social en la que puedes preguntar y responder preguntas de otros estudiantes.
 7. En la seccion de juegos hay 2 juegos que puedes jugar, uno de ellos es un ahorcado, el otro es un juego de preguntas con diferentes temas para seleccionar.
 8. En la sección de calificaciones puedes checar las calificaciones de los cursos en los que estas inscrito asi como un promedio de esa materia.
@@ -58,5 +58,7 @@ libs: Bibliotecas de bootstrap
 
 statics: docs contiene la base de datos, media tiene las imagenes, style todas las hojas de estilo de css, templates contiene los maquetados de html.
 
-## Creditos
+## Créditos
 
+Santiago Danda:
+Hice la base de datos, el registro, el incio de sesión, la parte de base de datos de las dudas y las clases.

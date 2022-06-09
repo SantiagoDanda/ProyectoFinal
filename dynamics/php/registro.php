@@ -64,6 +64,11 @@
     }
     
     //////////////PETICIÓN PARA REGISTRAR////////////////////////
+    $caracteres=str_split("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
+    $partesPimienta= array_rand($caracteres, 2);
+    $pimienta= $caracteres[$partesPimienta[0]].$caracteres[$partesPimienta[1]];
+    $sal= hash("sha256", $usuario);
+    $contrasena= hash("sha256", $contrasena.$pimienta.$sal);
     $peticionRegistro = "INSERT INTO usuarios VALUES ($numcuenta, '$usuario', '$correo', '$contrasena',
     NULL, NULL, NULL, NULL, '$tipoDeUsuario', '$nombre')";
     $consulta = mysqli_query($conexion, $peticionRegistro);
