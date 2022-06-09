@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        $nombreClase = $_GET['nombre'];
+        $nombreClase = $_GET["nombre"];
         echo'
             <div>
                 <form action="./archivo/archivoTarea.php?nombre='.$nombreClase.'" method="POST" enctype="multipart/form-data">
