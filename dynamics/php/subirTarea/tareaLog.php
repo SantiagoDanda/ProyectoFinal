@@ -8,10 +8,9 @@
     $fechaSubida = date("Y-m-d H:i:s");
     $numCuenta = $_SESSION['numcuenta'];
 
-    $peticionRegistro = "INSERT INTO tareas VALUES (NULL, NULL, $numCuenta, NULL, 1, NULL, '$fechaSubida')";
+    $peticionRegistro = "INSERT INTO tareahasusuario VALUES (NULL, NULL, $numCuenta, NULL, true, NULL, '$fechaSubida')";
     $peticionReg =  mysqli_query($conexion, $peticionRegistro);
-    $subidoo = mysqli_fetch_array($peticionReg);
-    if($subidoo == true){
+    if($peticionReg == true){
         echo'
         <script type="text/javascript">
             alert("La tarea fue completada");
