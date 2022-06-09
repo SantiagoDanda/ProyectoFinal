@@ -60,3 +60,6 @@ statics: docs contiene la base de datos, media tiene las imagenes, style todas l
 
 ## Creditos
 
+Santiago Danda:
+Hice la base de datos, el registro, el incio de sesión, la parte de base de datos de las dudas y las clases.
+
