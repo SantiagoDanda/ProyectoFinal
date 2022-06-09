@@ -64,4 +64,4 @@ Santiago Danda:
 Hice la base de datos, el registro, el incio de sesión, la parte de base de datos de las dudas y las clases.
 
 Jesús Morales:
-Hice el maquetado, funcionalidad perfil, funcionalidad foro, calificaciones.
+Hice el maquetado, funcionalidad perfil, funcionalidad foro, calificaciones y algo de css.
