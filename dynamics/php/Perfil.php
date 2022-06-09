@@ -65,11 +65,11 @@
         $publico = true;
         // arreglo de Cursos
         
-        $arreglo = array("Mate", "Santiago", "Química", "TuMamá");
+        $arreglo = array("Mate", "Santiago", "Química");
         $totalArreglos = count($arreglo);
         // arreglo de 
         
-        $arregloClases = array("Mateeee", "Santiagoeee", "Químicaee", "TuMamáee");
+        $arregloClases = array("Mateeee", "Santiagoeee", "Químicaee");
         $totalArreglosC = count($arregloClases);
 
         // echo"$inicial";

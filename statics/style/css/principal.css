@@ -1,8 +1,11 @@
 /* //////////ETIQUETAS/////////// */
+
 body{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+    background-color: rgb(168, 201, 239);
+ 
 }
 
 /* ////////////CLASS////////////// */
@@ -13,7 +16,7 @@ body{
     align-items: center;
     /* justify-content: center ;  */
     justify-content: space-between ;
-    background-color: rgb(125, 186, 248);
+    background-color: rgba(44, 62, 255, 0.37);
     min-width: 10em;
     max-width: 40em;
     width: 30em;
