@@ -1,0 +1,53 @@
+body{
+    background-color: rgba(15, 124, 124, 0.43);
+    overflow-wrap: break-word;
+}
+input{
+    position: relative;
+    width: 30%;
+    margin: 1%;
+}
+label{
+    position: relative;
+    margin-left: 10%;
+}
+.NuevaPregunta{
+    border: 1px solid black;
+    background-color: cadetblue;
+    margin: 5vh;
+    width: 80 vh;
+    font-size: x-large;
+    overflow-wrap: break-word;
+}
+.BotonBorrar{
+    position: relative;
+    font-size: large;
+    border: 1px solid black;
+    width: 20%;
+    min-width: auto;
+    background-color: aliceblue;
+    left: 70%;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+#Btn-Enviar{
+    position: fixed;
+    left: 80%;
+    top: 80%;
+    background-color: darkblue;
+    width: 10vw;
+    border: 1px solid black;
+    font-size: 2vh;
+    color: white;
+    overflow-wrap: break-word;
+}
+#BotonAgregarPregunta{
+    position: relative;
+    left: 20%;
+    background-color: darkblue;
+    width: 20vw;
+    border: 1px solid black;
+    font-size: 2vh;
+    color: white;
+    overflow-wrap: break-word;
+}

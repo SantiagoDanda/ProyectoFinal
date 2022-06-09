@@ -14,7 +14,7 @@ botones[1].addEventListener("click", (evento) =>{ //Clases
     window.location.href = "../php/clases/clases.php";
 });
 botones[3].addEventListener("click", (evento) =>{ //Juegos
-    window.location.href = "";
+    window.location.href = "../../statics/templates/juegosPrincipal.html";
 });
 botones[4].addEventListener("click", (evento) =>{ //Calificaciones
     window.location.href = "";

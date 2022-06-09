@@ -10,21 +10,26 @@
 <body>
     <div id="botones">
         <button id="ahorcado">Juega el juego de ahoracdo</button>
-        <button id="kahoot">owo</button>
+        <button id="kahoot">Responde a un cuestionario</button>
+        <button id="crearkahoot">Crea un Cuestionario</button>
     </div>
     
     <script>
         /////// BOTONES-Luca //////////
         const ahoracdo = document.getElementById("ahorcado");
         const kahoot = document.getElementById("kahoot");
+        const crearkahoot= document.getElementById("crearkahoot");
 
         ahoracdo.addEventListener("click", () =>{
             window.location.href = "Ahorcado.html";
         });
 
         kahoot.addEventListener("click", () =>{
-            window.location.href = "../../dynamics/php/dudasPag.php";
+            window.location.href = "./juego.html";
         });
+        crearkahoot.addEventListener("click", ()=>{
+            window.location.href="./CrearCuestionario.html"
+        })
     </script>
 </body>
 </html>
