@@ -33,5 +33,5 @@ fetch("../../dynamics/php/clases/obtenerClasesAlumno.php")
     });
 
 clases.addEventListener("click", (evento) =>{
-    window.location.href = "../../dynamics/php/clases/clasesprofe.php?nombre="+evento.target.id;
+    window.location.href = "../../dynamics/php/clases/vistaClase.php?nombre="+evento.target.id;
 });
