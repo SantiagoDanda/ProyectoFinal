@@ -1,5 +1,5 @@
 <?php
-        // iniciar las seciones
+ q        // iniciar las seciones
         session_start();
         include("./conexion.php");
         $conexion = connect();

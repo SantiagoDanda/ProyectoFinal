@@ -26,7 +26,7 @@
                         <input  required type="text" name="nombreAct"> (requerido)
                         <h1>Subir archivo</h1>
                         <label for="namei">Nombre del archivo</label>
-                        <input required type="texto" name="namei" id="namei">
+                        <input required type="text" name="namei" id="namei">
                         <br/><br/>
                         <label for="archivo">Archivo: </label>
                         <input type="file" name="archivo" id="archivo">
