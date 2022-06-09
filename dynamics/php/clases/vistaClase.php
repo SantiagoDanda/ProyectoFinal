@@ -1,6 +1,7 @@
 <?php
     session_start();
     $nombre = $_GET['nombre'];
+
     echo '
     <!DOCTYPE html>
     <html lang="en">
@@ -23,6 +24,13 @@
         </div>
             
         <div id="contenedor-datos">
+
+            <div id="info" style="display: flex;">
+                <h1>¡Bienvenido a tu clase!</h1>
+                El código de la clase es:
+                <h2 id="codigo">
+                </h2>
+            </div>
 
             <div id="hacer-post" style="display: none;">
                 <form id="post">

@@ -17,16 +17,30 @@ const subirTarea = document.getElementById("subir-tarea");
 const subirTareaBtn = document.getElementById("btn-subirtarea");
 const tareas = document.getElementById("tareas");
 
-let dibujar = 0;
+const codigo = document.getElementById("codigo");
+const info = document.getElementById("info");
+
+fetch("./obtenercodigo.php?nombre="+nombreClase.textContent+"")
+    .then((response)=>{
+        return response.json();
+    })
+    .then((datosJSON)=>{
+        codigo.innerHTML += datosJSON; 
+    });
+
+let dibujarPersonas= 0;
 
 entradas.addEventListener("click", (evento) =>{
     if(evento.target.id == 'personas'){
 
+        info.style.display = "none"
         subirTareaBtn.style.display = "none"
         hacerPost.style.display = "none";
         publicaciones.style.display = "none";
         personas.style.display = "block";
         tareas.style.display = "none";
+
+        personas.innerHTML = "";
 
         fetch("./obtenerAlumnos.php?nombre="+nombreClase.textContent+"")
             .then((response)=>{
@@ -35,21 +49,21 @@ entradas.addEventListener("click", (evento) =>{
             .then((datosJSON)=>{
                 let long = datosJSON.length;
                 
-                if(dibujar != 1){
-                    for(let i=0; i<=long-1; i++){
-                            personas.innerHTML += "<div class='personas'>"+datosJSON[i].nombre+"</div>";
-                    }
+                for(let i=0; i<=long-1; i++){
+                        personas.innerHTML += "<div class='personas'>"+datosJSON[i].nombre+"</div>";
                 }
-                dibujar = 1;
             });
     }
 
     if(evento.target.id == 'trabajo'){
+        info.style.display = "none"
         personas.style.display = "none";
         hacerPost.style.display = "none";
         publicaciones.style.display = "none"
         subirTareaBtn.style.display = "block"
         tareas.style.display = "block";
+
+        tareas.innerHTML="";
 
         subirTareaBtn.addEventListener("click", ()=>{
             window.location.href = "../subirTareas.php?nombre="+nombreClase.textContent+"";
@@ -67,7 +81,10 @@ entradas.addEventListener("click", (evento) =>{
     }
 
     if(evento.target.id == 'novedades'){
+
+        publicaciones.innerHTML="";
         
+        info.style.display = "none"
         subirTareaBtn.style.display = "none"
         personas.style.display = "none";
         hacerPost.style.display = "flex";
@@ -99,5 +116,11 @@ botonEnviarPub.addEventListener("click", (eventoBoton)=>{
     }).then((datosJSON)=>{
         alert("Publicación creada");
     });
+});
+
+tareas.addEventListener("click", (evento)=>{
+    if(evento.target.className == 'tareas-contenedor'){
+        window.location.href = "../tareas/vistaTarea.php?nombreTarea="+evento.target.textContent+"&nombreclase="+nombreClase.textContent+"";
+    }
 });
 
