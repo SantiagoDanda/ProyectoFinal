@@ -24,29 +24,19 @@ class Palabras {
     // variable que contiene la palabra o frase a encontrar
     palabraSeleccionada="";
 
-    /**
-     * funcion que devuelve un elemento aleatorio
-     * @param {string} ar array de palabras
-     */
+    //funcion que devuelve un elemento aleatorio
     buscarPalabra(ar) {
         this.palabraSeleccionada=ar[Math.floor(Math.random() * ar.length)];
     }
 
-    /**
-     * Funcion para determinar si la palabra ha sido encontrada
-     * 
-     * @return {boolean} - devuelve true si la palabra ha sido encontrada
-     */
+    
+    //Funcion para determinar si la palabra ha sido encontrada
     palabraEncontrada() {
         return !Array.from(document.querySelectorAll("#letrasBuscar>span")).some(el => el.innerText==="_");
    }
 
-    /**
-     * Funcion para mostrar la palabra o frase con subguiones
-     * en el id indicado
-     * @param {string} element elemento donde poner la palabra o frase
-     * @param {array} listadoLetras listado de las letras a mostrar
-     */
+    
+      //Funcion para mostrar la palabra o frase con subguiones en el id indicado
     mostrarPalabraEnWeb(idPalabras, listadoLetras) {
         idPalabras.innerHTML="";
         this.palabraSeleccionada.split('').map(el => {
@@ -58,13 +48,9 @@ class Palabras {
         });
     }
 
-    /**
-     * Función para buscar en la palabra la letra recibida
-     * Si se encuentra, se añade la clase "ok"
-     *  
-     * @param {string} letra
-     * @return {boolean} true si existe la letra en la palabra
-     */
+    
+    //Función para buscar en la palabra la letra recibida
+     //Si se encuentra, se añade la clase "ok"
     letraEnPalabra(letra) {
         return this.palabraSeleccionada.toLowerCase().indexOf(letra.toLowerCase())>-1;
     }

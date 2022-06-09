@@ -3,12 +3,8 @@ class Letras extends Palabras {
     letrasSeleccionadas=[];
     fallos=0;
 
-    /**
-     * Metodo para añadir la letra seleccionada por el usuario
-     * 
-     * @param {string} letra 
-     * @returns {boolean} 
-     */
+    
+    //Metodo para añadir la letra seleccionada por el usuario
     entradaLetra(letra) {
         this.letra = letra;
         return this.letra;
@@ -32,10 +28,7 @@ class Letras extends Palabras {
     }
 
     /**
-     * Funcion para mostrar la imagen del ahorcado
-     * 
-     * @param {integer} number 
-     */
+     * Funcion para mostrar la imagen del ahorcado*/
     showImage(number) {
         document.getElementById("imagen").src="../media/imgo/"+number+".png";
         if (number==10) {

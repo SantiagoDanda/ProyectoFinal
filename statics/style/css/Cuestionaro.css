@@ -1,0 +1,58 @@
+body{
+    background-color: teal;
+}
+p{
+    overflow-wrap: break-word;
+}
+.Opcion{
+    /* position: relative; */
+/* width: 50%;
+height: 50%; */
+    background-color: aliceblue;
+    border: 1px solid black;
+    flex-grow: 2;
+    font-size: x-large;
+    overflow-wrap: break-word;
+}
+.FinDelJuego{
+    width: 90vw;
+    height: 90vh;
+    font-size: xx-large;
+    background-color: aliceblue;
+    overflow-wrap: break-word;
+}
+.contenedorPreguntas{
+    display: none;
+    overflow-wrap: break-word;
+    padding: 50%;
+}
+#Pregunta{
+    position: relative;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: xx-large;
+    width: 80%;
+    overflow-wrap: break-word!important;
+    margin: 15%;
+}
+#Respuestas{
+    position: relative;
+    display: flex;
+    /* align-items: stretch; */
+    flex-wrap: wrap;
+    width: 40vw;
+    border: solid 1px black;
+    overflow-wrap: break-word;
+    margin-left: 30%;
+}
+#timer{
+    overflow-wrap: break-word;
+    text-align: center;
+    position: relative;
+    left: 80%;
+    background-color: aliceblue;
+    width: 10%;
+    height: 5%;
+    text-align: center;
+    font-size: large;
+}
