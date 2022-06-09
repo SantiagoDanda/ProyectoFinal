@@ -5,7 +5,11 @@
 
     $nombreClase = $_GET['nombre'];
 
-    $consultaNombres= "SELECT nombre from clasehasusuario inner join usuarios on clasehasusuario.id_usuario=usuarios.numcuenta";
+    $consulta = "SELECT id_clase from clases where nombre = '$nombreClase'";
+    $sql = mysqli_query($conexion, $consulta);
+    $sql = mysqli_fetch_array($sql);
+
+    $consultaNombres= "SELECT nombre from clasehasusuario inner join usuarios on clasehasusuario.id_usuario=usuarios.numcuenta where id_clase =$sql[0]";
     $sql = mysqli_query($conexion, $consultaNombres);
 
     $resultados = [];

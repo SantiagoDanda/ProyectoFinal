@@ -39,3 +39,29 @@ body{
     justify-content: center;
     margin-top: 7px;
 }
+#subir-tarea{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7px;
+}
+
+.tareas-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    background-color: rgb(243, 138, 63);
+    margin-top: 7px;
+    padding: 2em;
+}
+#info{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7px;
+}
