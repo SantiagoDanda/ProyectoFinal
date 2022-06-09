@@ -58,7 +58,7 @@ libs: Bibliotecas de bootstrap
 
 statics: docs contiene la base de datos, media tiene las imagenes, style todas las hojas de estilo de css, templates contiene los maquetados de html.
 
-## Creditos
+## Créditos
 
 Santiago Danda:
 Hice la base de datos, el registro, el incio de sesión, la parte de base de datos de las dudas y las clases.
