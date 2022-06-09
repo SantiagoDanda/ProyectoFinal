@@ -26,19 +26,15 @@
         $foto = mysqli_fetch_array($foto);
 
         //nos da los valores del perfil
-
         $direccionImagen = "../../../statics/media/img/".$foto[0];
         $inicial = substr($usuario, 0,1);
         $inicial = strtoupper($inicial);
 
         //Variables
-        $porcentaje = 70;
-        // echo json_encode($porcentaje);
-        // $peticionMat = "SELECT * FROM clases where id_clase = '1'";
         
         $peticionMat = "SELECT nombre from clasehasusuario NATURAL JOIN clases where id_usuario=$numCuenta";
         $materia = mysqli_query($conexion, $peticionMat);
-        $z=0;
+        $z=0; 
         while($materiav = mysqli_fetch_array($materia)){
             // var_dump($materiav[0]);
             if($materiav != NULL){
@@ -80,26 +76,30 @@
         if($totalClases != 0){
             for($i = 0; $i < $totalClases; $i++){
             echo"
-                <div id='cuadroClases'>
+                <div id='contenedorCal'>
                     <div id='contenedorClases'>
-                    <div id='linea'><strong id='bloque'>Nombre del curso:</strong><u id='bloque'>".$arregloMat[$i]['nombre']."</u></div><br/>
+                    <div id='linea'>
+                        <strong id='bloque'>Nombre del curso:</strong><u id='bloque'>".$arregloMat[$i]['nombre']."</u>
+                    </div><br/>
                         <form action='./listaCalif.php'>
-                            <button class='estiloB' id='".$arregloIdMat[$i]['id_clase']." name='".$arregloIdMat[$i]['id_clase']."'>Ver calificaciones</button>
-                        </form><br/>
+                            <button class='estiloB' class='botonClass' id='".$arregloIdMat[$i]['id_clase']."' name='".$arregloIdMat[$i]['id_clase']."'>Ver calificaciones</button><br/>
+                        </form>
                         <div id='porcentajeT'>
-                        </div>
-                    
+                        </div>                
                     </div> 
                 </div><br/>";
             }
         }else{
             echo"No estas inscrito a ninguna clase";
         }
-        echo"
-        <script src='../../js/calificaciones.js'>
-        </script>
-        ";
+    ;
         
     ?>
+     <!-- echo"
+        <script src='../../js/calificacion.js'>
+        </script>
+        " -->
+     <!-- <script src='../../js/calificaciones.js'>
+        </script> -->
 </body>
 </html>

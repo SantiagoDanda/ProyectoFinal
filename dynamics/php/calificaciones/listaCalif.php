@@ -11,12 +11,14 @@
 
     <?php
         session_start();
+
         require "../conexion.php";
         $conexion = connect();
         $usuario = $_SESSION["numcuenta"];
+
         //variables
         $arregloName = NULL;
-        // peticiones de tarea has usuarios
+        
         $peticionName = "SELECT nombre from tareahasusuario inner join tareas on tareahasusuario.id_tarea=tareas.id_tarea where tareahasusuario.numcuenta = $usuario";
         $z= 0;
         $name = mysqli_query($conexion, $peticionName);
@@ -24,6 +26,8 @@
             $arregloName[$z] = $idName;
             $z++;
         }
+        // peticiones de tarea has usuarios
+        
         if($arregloName != NULL){
             $totalClases =count($arregloName);
         }else{
@@ -50,7 +54,6 @@
             $total = 1;
         }
         $promedio = $promedio/$total;
-        echo $promedio;
 
         $peticionFecha = "SELECT fechasubida FROM tareahasusuario where numcuenta = $usuario";
         $fecha = mysqli_query($conexion, $peticionFecha);
@@ -77,7 +80,7 @@
                         </tr>
                     </thead>
                     <tbody>';
-                    if($totalClases != 0){
+                    if($totalClases != 0){ 
                         for($i = 0; $i < $totalClases; $i++){
                             echo '<tr>
                                 <td>'.$arregloName[$i]["nombre"].'</td>
