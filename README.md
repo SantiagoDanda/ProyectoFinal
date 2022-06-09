@@ -4,7 +4,7 @@
 
 Explicación:
 
-    Nuestro proyecto consiste en un aula virtual, en la cual puedes jugar diversos juegos educativos, ver fechas importantes, tener diferentes clases con tareas y anuncios, estas tareas pueden ser calificadas por el maestro. También tiene un foro de preguntas, en el cual los alumnos pueden preguntar y responder entre ellos sobre distintos temas académicos.
+Nuestro proyecto consiste en un aula virtual, en la cual puedes jugar diversos juegos educativos, ver fechas importantes, tener diferentes clases con tareas y anuncios, estas tareas pueden ser calificadas por el maestro. También tiene un foro de preguntas, en el cual los alumnos pueden preguntar y responder entre ellos sobre distintos temas académicos.
 
 Tecnologías:
 
