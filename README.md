@@ -51,8 +51,11 @@ SOURCE moodle.sql;
 ## Organización de las carpetas
 
 Existen 3 carpetas con subcarpetas:
+
 dynamics: Aqui estan todas los archivos de JS y PHP
+
 libs: Bibliotecas de bootstrap
+
 statics: docs contiene la base de datos, media tiene las imagenes, style todas las hojas de estilo de css, templates contiene los maquetados de html.
 
 ## Creditos
