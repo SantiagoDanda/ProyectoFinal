@@ -1,28 +1,20 @@
-
 <?php
+    header("Content-Type:aplication/json");
     session_start();
     require "../conexion.php";
-    $conexion = connect();
+    $json = json_decode(file_get_contents("php://input"), true);
+    $conexion = connect(); 
 
-    $texto= (isset($_POST['coment'])&& $_POST["coment"] != "")? $_POST['coment']:NULL;
+    $comentario= (isset($json['comentario'])&& $json['comentario'] != "")? $json['comentario']:null;
+    $idP = $json['idpublicacion'];
     $fechaSubida = date("Y-m-d H:i:s");
-
-    $peticionComentario = "INSERT INTO comentarios VALUES (NULL, $numcuenta, '$fechaSubida', NULL, NULL, NULL, '$etiqueta', '$descripcion')";
+    $numCuenta = $_SESSION["numcuenta"];
+    // falta el id publicación ya no
+    $peticionComentario = "INSERT INTO comentarios VALUES (null, $idP, $numCuenta, '$fechaSubida', '$comentario')";
     $consultaComent = mysqli_query($conexion, $peticionComentario);
-
     if($consultaComent == true){
-        echo'
-        <script type="text/javascript">
-            alert("El archivo fue enviado correctamente");
-            window.location.href="../Perfil.php";
-        </script>';
-        die();
+        echo '{"ok":true}';
     }else{
-        echo'
-        <script type="text/javascript">
-            alert("Algo falló.");
-        </script>';
-        die();
+        echo '{"ok":false}';
     }
-
-?>
+?> 

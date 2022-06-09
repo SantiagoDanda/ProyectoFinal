@@ -8,8 +8,6 @@
     <!-- <link rel="stylesheet" href="../../..libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css"> -->
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="../../../statics/style/css/foro.css"> -->
-
-
 </head>
 <body>
     <?php
@@ -22,6 +20,7 @@
         echo '<h1>Foro de preguntas y publicaciones</h1><br/>';
 
         echo '
+        <div id="contenedor_id">
         <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Subir publicación   
@@ -47,19 +46,19 @@
                                 <label for="puntos">Puntos: </label>
                                 
                                 <h3>Subir imagen o archivo (opcional)</h3>
-
-                                <label for="nameArch">Nombre del archivo</label>
-                                <input type="texto" name="nameArch" id="nameArch">
-                                <label for="etiqueta">Agrega etiqueta: (opcional)</label>
-                                <input type="texto" name="etiqueta" id="etiqueta">
-                                <br/><br/>
-                                <label for="archivo">Archivo: </label>
-                                <input type="file" name="archivo" id="archivo">
-                                <br/><br/>             
-                                <div class="modal-footer">
-                                    <input type="submit" value="enviar"><br/><br/>
-                                    <input type="reset" value="borrar">
-                                </div>
+                                
+                                    <label for="nameArch">Nombre del archivo</label>
+                                    <input type="texto" name="nameArch" id="nameArch">
+                                    <label for="etiqueta">Agrega etiqueta: (opcional)</label>
+                                    <input type="texto" name="etiqueta" id="etiqueta">
+                                    <br/><br/>
+                                    <label for="archivo">Archivo: </label>
+                                    <input type="file" name="archivo" id="archivo">
+                                    <br/><br/>             
+                                    <div class="modal-footer">
+                                        <input type="submit" value="enviar"><br/><br/>
+                                        <input type="reset" value="borrar">
+                                    </div>
                             </fieldset>
                         </form>
                     </div>
@@ -101,7 +100,7 @@
 
             if($totalPublicaciones != 0){
                 for($i= 0; $i < $totalPublicaciones;$i++){
-                echo'<div>
+                echo'<div id="contenedor_id">
                         <h4>Publicación</h4>
                         <strong>Descripción: </strong>'.$arregloComent[$i]['descripcion'].'<br/>
                         ';
@@ -110,15 +109,25 @@
                             echo"<img id='perfil' class='imagen' alt='Foto perfil".$i."' src='".$direccionImagen[$i]."'><br/>";
                         }
                         echo '
-                        <form action="./comentario.php" method="POST">
                             <label for="coment"><strong>Agrega un comentario:</strong></label>
-                            <input type="text" name="coment">
-                            <input type="submit" value="enviar">   
+                            <input type="text" name="coment" id="comentario-'.$i.'">
+                            <input type="submit" id='.$i.' class="botonC" value="enviar">   
                             <input type="reset" value="borrar">
-                        </form><br/>';
-                        $texto = 1;
-                        if($texto != NULL){
-                            echo'';
+                            <br/>';
+                        $peticionTexto = "SELECT texto FROM comentarios WHERE id_publicacion = $i";
+                        $texto = mysqli_query($conexion, $peticionTexto);
+                        $z= 0;
+                        $arregloTexto = NULL;
+                        while($textoo = mysqli_fetch_array($texto)){
+                            if($textoo != NULL){
+                                $arregloTexto[$z] = $textoo;
+                            }
+                            $z++;
+                        }
+                        if($arregloTexto != NULL){
+                            for($b = 0; $b < $z; $b++){
+                                echo'- '.$arregloTexto[$b]['texto'].'<br/>';
+                            }
                         }
                         echo'
                     </div>';
@@ -127,14 +136,13 @@
                 echo'no existe publicaciones';
             }
         echo '
+        </div>
         <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js">
         </script>
-            <script src= "../../js/foro.js">
-
+            <script src= "../../js/comentario.js">  
         </script>
         ';
 
     ?>    
-
 </body>
 </html>

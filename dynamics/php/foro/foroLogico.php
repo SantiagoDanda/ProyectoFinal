@@ -18,7 +18,7 @@
 
     
         echo "adfasdlfñjasdlfds";
-
+ 
         $z= "SELECT MAX(id_publicacion) FROM publicaciones";
         $z = mysqli_query($conexion, $z);
         $z = mysqli_fetch_array($z);
@@ -28,6 +28,8 @@
                 $name= $_FILES['archivo']['name'];
                 $ext = pathinfo($name,PATHINFO_EXTENSION);
                 if($ext == 'png' || $ext == 'jpg' || $ext == 'jpeg' || $ext == 'pdf' || $ext == 'docx'){
+                    rename($arch, '../../../statics/media/archivosPublicaciones/'.$nombre.'.'.$ext);
+                    $nombreC = $archivoName.'.'.$ext;
                     if($archivoName != "sin nombre archivo"){
                         $peticionInfo = "UPDATE publicaciones SET archivo='$nombreC' WHERE id_publicacion=$z[0]";
                         $peticionInfo =  mysqli_query($conexion, $peticionInfo);
@@ -44,7 +46,7 @@
         echo'
         <script type="text/javascript">
             alert("El archivo fue enviado correctamente");
-            window.location.href="../Perfil.php";
+            window.location.href="./foroPrincipal.php";
         </script>';
         die();
     }else{
@@ -58,7 +60,7 @@
         echo'
         <script type="text/javascript">
             alert("El archivo fue enviado correctamente");
-            window.location.href="../Perfil.php";
+            window.location.href="./foroPrincipal.php";
         </script>';
         die();
     }else{
