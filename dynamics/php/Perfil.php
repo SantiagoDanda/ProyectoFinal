@@ -151,5 +151,9 @@
     <!-- <script src="../js/perfil.js">
 
     </script> -->
+    <br>
+    <form action="../../dynamics/php/alumnoPrincipal.php">
+            <button class="boton">Regresar a sala principal</button>
+        </form>
 </body>
 </html>
