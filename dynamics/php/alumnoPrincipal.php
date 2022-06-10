@@ -34,6 +34,11 @@
                 <button class="botonPrin" id="btn-calificaciones">Calificaciones</button>
             </form>';
         }
+        echo '
+        <form action="./cerrarSesion.php">
+            <button class="botonPrin" id="btn-sesion">Cierra tu sesion</button>
+        </form>
+        ';
         echo '</div>
         <script src="../js/botonesInicio.js"></script>
     ';

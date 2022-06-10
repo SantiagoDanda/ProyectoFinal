@@ -65,3 +65,9 @@ Hice la base de datos, el registro, el incio de sesión, la parte de base de dat
 
 Jesús Morales:
 Hice el maquetado, funcionalidad perfil, funcionalidad foro, calificaciones y algo de css.
+
+Gian Marco Lucatero:
+Hice el ahorcado, css, diccionario, documentacion.
+
+Isaac:
+Hice el calendario, hasheo de las contraseñas, el otro juego, css.
