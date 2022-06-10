@@ -27,7 +27,7 @@ Importancia:
 Dentro de la terminal en windows
 cd  C:\xampp\mysql\bin
 
-mysql -u root --default-character-set=utf8
+.\mysql -u root --default-character-set=utf8
 
 SET names 'utf8';
 
