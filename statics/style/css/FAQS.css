@@ -27,7 +27,7 @@ header {
 }
 /* cuando el faq le des click cambia de color y aparece el texto*/
 .faq.active {
-	background-color: #ffa;
+	background-color: rgb(90, 61, 255);
 }
 .faq.active p {
 	display: block;

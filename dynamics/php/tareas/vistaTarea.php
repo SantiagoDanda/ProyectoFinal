@@ -2,14 +2,13 @@
     require "../conexion.php";
     $conexion = connect();
     session_start();
-    
+    $tipo = $_SESSION["tipo"];
     $nombreTarea = $_GET['nombreTarea'];
     $nombreClase = $_GET['nombreclase'];
 
     $consulta = "SELECT id_clase from clases where nombre = '$nombreClase'";
     $id = mysqli_query($conexion, $consulta);
     $id = mysqli_fetch_array($id);
-    var_dump($id);
 
     $muestraDatos = "SELECT descripcion, puntos, fechasubida, fechaentrega, material from tareas where id_clase = $id[0] and nombre = '$nombreTarea'";
     $sql = mysqli_query($conexion, $muestraDatos);
@@ -62,14 +61,16 @@
                 </div>
                 <div class="div1" id="'.$nombreTarea.'">
                 </div>
-                <div id="descargaTrol">
+                <div id="descargaTrol">';
+                if($tipo != 'profe'){
+                    echo'
+                    <button id="descarga">Descargar</button>
 
-                <button id="descarga">Descargar</button>
-                
-                <form action="../subirTarea/subirTarea.php">
-                    <button>Subir tu tarea</button>
-                </form>
-                ';
+                    <form action="../subirTarea/subirTarea.php">
+                        <button>Subir tu tarea</button>
+                    </form>
+                    ';
+                }
                echo '<div/>
             </div>
         </div>
@@ -102,11 +103,11 @@
         $consultaNombres= "SELECT nombre from clasehasusuario inner join usuarios on clasehasusuario.id_usuario=usuarios.numcuenta where id_clase =$id[0]";
         $sql = mysqli_query($conexion, $consultaNombres);
         $sql = mysqli_fetch_assoc($sql);
-
         echo '<h2>Revisar a:</h2>';
-
-        foreach ($sql as $key => $value) {
-            echo '<div>'.$value.'</div>';
+        if($sql != NULL){
+            foreach ($sql as $key => $value) {
+                echo '<div>'.$value.'</div>';
+            }
         }
     }else{
         echo '

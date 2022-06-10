@@ -61,9 +61,6 @@
                 <div id="tareas" style="display: none;"><h1>TAREAS:</h1><br><br></div>
             </div>
         </div>
-        <form action="../subirTarea/subirTarea.php">
-            <button>Subir tu tarea</button>
-        </form>
         <form action="../alumnoPrincipal.php">
         <button class="boton">Regresar a sala principal</button>
         </form>
