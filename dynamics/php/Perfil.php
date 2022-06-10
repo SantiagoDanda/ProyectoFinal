@@ -25,7 +25,9 @@
         $numCuenta = $_SESSION["numcuenta"];
         // si es maestro es igual a profe y si no es igual a alumno
         $tipo= $_SESSION["tipo"];
-        
+
+        // variable
+        $arregloClases = NULL;
         //Estas son las peticiones a la base de datos;
         $peticionUsuario = "SELECT usuario from usuarios where usuario = '$nombre'";
         $consultaPerfilUs = mysqli_query($conexion, $peticionUsuario);
@@ -65,12 +67,17 @@
         $publico = true;
         // arreglo de Cursos
         
-        $arreglo = array("Mate", "Santiago", "Química");
-        $totalArreglos = count($arreglo);
         // arreglo de 
         
-        $arregloClases = array("Mateeee", "Santiagoeee", "Químicaee");
-        $totalArreglosC = count($arregloClases);
+        $peticionClases = "SELECT nombre FROM clasehasusuario NATURAL JOIN clases where id_usuario = $_SESSION[numcuenta]";
+        $clases = mysqli_query($conexion, $peticionClases);
+        $z=0; 
+        while($clasess = mysqli_fetch_array($clases)){
+            // var_dump($materiav[0]);
+            $arregloClases[$z] = $clasess;
+            $z++;
+        }
+        // var_dump($arregloClases);
 
         // echo"$inicial";
 
@@ -105,20 +112,17 @@
                     echo "<br/><strong>Contacto: </strong> No tenemos esta información, añadela ";
                 }
 
-                if($tipo != "profe"){
                      echo "<br/><br/><strong>Cursos en los que participa: </strong><br/>";
-                     if($arreglo != Null){
-                        for($i = 0; $i < $totalArreglos-1; $i++){
-                            echo "- ".$arreglo[$i]."<br/>"; 
-                        }
-                        echo "- ".$arreglo[$i]."<br/>"; 
+                if($arregloClases != Null){
+                    for($i = 0; $i < $z; $i++){
+                        echo "- ".$arregloClases[$z]["clases"]."<br/>"; 
                     }
                 }else{
-                    echo "<br/><br/><strong>Clases: </strong><br/>";
-                    for($i = 0; $i < $totalArreglosC-1; $i++){
-                        echo "- ".$arregloClases[$i]."<br/>"; 
+                    if($tipo == "profe"){
+                        echo "<br/>No tienes ninguna clase<br/>";
+                    }else{
+                        echo "<br/>No estás inscrito a ninguna clase<br/>";
                     }
-                    echo "- ".$arregloClases[$i]."<br/>"; 
                 }
 
                 if($consultaPerfilI[0] !=NULL){
