@@ -34,7 +34,7 @@
                 // rename($arch, "../../../statics/medis/archivosPublicaciones/".$nombre.$ext);
                 $nombreC = $nombre.$ext;
             }else{
-                echo"Solo aceptamos imagenes con extención .jpg, .jpeg, .png, .pdf, .docx ";
+                echo"Solo aceptamos imagenes con extensión .jpg, .jpeg, .png, .pdf, .docx ";
             }
         }
  
