@@ -1,0 +1,39 @@
+.Dia{
+    border: 1px solid black;
+    text-align: center;
+    flex-grow: 1;
+}
+#Calendario{
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    height: 90vh;
+    left: 17%;
+    overflow-wrap: break-word;
+}
+#BotonAvanzar{
+    border: 1px solid black;
+    position: fixed;
+    width: 10vw;
+    height: 90vh;
+    left: 5%;
+    top: 5%;
+    background-color: darkgreen;
+    font-size: xx-large;
+    text-align: center;
+    color: aliceblue;
+}
+#BotonAtras{
+    border: 1px solid black;
+    position: fixed;
+    width: 10vw;
+    height: 90vh;
+    left: 90%;
+    top: 5%;
+    background-color: darkgreen;
+    font-size: xx-large;
+    text-align: center;
+    color: aliceblue;
+}

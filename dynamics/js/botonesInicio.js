@@ -8,7 +8,7 @@ preguntas.addEventListener("click", (evento) => {
 });
 
 botones[0].addEventListener("click", (evento) =>{ //Calendario
-    window.location.href = "";
+    window.location.href = "../../statics/templates/Calendario.php";
 });
 botones[1].addEventListener("click", (evento) =>{ //Clases
     window.location.href = "../php/clases/clases.php";
