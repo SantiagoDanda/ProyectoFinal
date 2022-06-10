@@ -96,5 +96,11 @@
             </div>
         ';
     ?>
+    <form action="../../../dynamics/php/alumnoPrincipal.php">
+            <button class="boton">Regresar a sala principal</button>
+    </form>
+    <form action="./calificaciones.php">
+            <button class="boton">Regresar a las calificaciones</button>
+    </form>
 </body>
 </html>

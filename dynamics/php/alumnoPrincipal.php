@@ -10,15 +10,11 @@
 <body>
     <?php
         session_start();
-        echo $_SESSION["usuario"];
-        echo $_SESSION["numcuenta"];
-        echo $_SESSION["tipo"];
         $tipo = $_SESSION["tipo"];
 
 
     ?>
     <?php
-    echo 'estoy en alumno';
     echo '<div class="fondo">
         <h1>Página principal</h1>
         <form action="./Perfil.php">
@@ -38,6 +34,11 @@
                 <button class="botonPrin" id="btn-calificaciones">Calificaciones</button>
             </form>';
         }
+        echo '
+        <form action="./cerrarSesion.php">
+            <button class="botonPrin" id="btn-sesion">Cierra tu sesion</button>
+        </form>
+        ';
         echo '</div>
         <script src="../js/botonesInicio.js"></script>
     ';

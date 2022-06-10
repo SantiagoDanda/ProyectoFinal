@@ -6,6 +6,24 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: rgb(14, 22, 80);
+    color: white;
+}
+button{
+    cursor:pointer;
+    display: block;
+    background-color: #3d67c7;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+button:hover{
+    background-color: #0c89ab;
 }
 
 /* /////////////CLASS///////////// */

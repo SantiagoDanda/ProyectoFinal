@@ -35,7 +35,7 @@
             rename($arch, '../../../statics/media/archivosTarea/'.$nombre.'.'.$ext);
             $nombreC = $nombre.'.'.$ext;
             $peticionRegistro = "INSERT INTO tareas VALUES (NULL, '$numCuenta', $peticionNombre[0], '$fechaSubida',
-            '$fechaEntrega', '$valorPuntos', '$nombreAct', '$comentario', '$nombre')";
+            '$fechaEntrega', '$valorPuntos', '$nombreAct', '$comentario', '$nombreC')";
             // var_dump($peticionRegistro);
             // $peticionInfo = "UPDATE tareas SET material='$nombre' WHERE numcuenta=$numCuentaMaestro";
 
