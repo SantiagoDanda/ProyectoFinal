@@ -20,7 +20,7 @@ body{
     min-width: 10em;
     max-width: 40em;
     width: 30em;
-    height:33em;
+    height: 85vh;
     min-height: 30em;
     max-height: 37em;
 
@@ -38,6 +38,7 @@ body{
     height: 3em;
     border: 0;
     border-radius: 19px;
+    margin: 10px;
 }
 .botonPrin:hover{
     background-color: rgb(178, 216, 251);
